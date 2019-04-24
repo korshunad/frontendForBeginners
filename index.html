@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anastasiia Makarochkina Final Project for MDIA 1472</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="images/logo.svg">
+      <nav>
+        <ul id="menu-links">
+          <li>
+            <a href="howto.html">
+              How to
+            </a>
+          </li>
+          <li>
+            <a href="listicles.html">
+              Listicles
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
+          <span id="close-menu" onclick="toggleMenu()">×</span>
+        </ul>
+        <div id="burger-menu" onclick="toggleMenu()">
+        menu
+        </div>
+      </nav>
+      <script>
+      const toggleMenu = () => {
+        var x = document.getElementById("menu-links");
+          if (x.className === "show") {
+              x.className = "";
+          } else {
+              x.className = "show";
+          }
+        }
+      </script>
+    </header>
+    <div class="hero-banner">
+      <span class="code-left">frontend-beginner:~ </span>
+      <span class="code-right">Hello World!</span>
+    </div>
+    <main>
+      <section>
+        <article>
+          <span class="tag">Featured</span>
+          <h1>Ultimate guide to centering with CSS in 2018</h1>
+          <p>Hello world!  It’s 2018 and still one of the most daunting CSS-related questions is the centering of the elements on a page. Recently a <a href="http://howtocenterincss.com/" rel="noopener noreferrer">CSS centering code generator</a> topped  1036 upvotes on HackerNews. Yet, our editorial staff doesn’t think it’s a solution for everything (<a href="#">see the review</a>). So we compiled our own guide for you to get all the practices for CSS centering in one place.</p>
+          <a href="#">Read more →</a>
+        </article>
+      </section>
+      <section class="listicles">
+        <div>
+          <span class="tag">Listicles</span>
+          <a href="#">See all lists →</a>
+        </div>
+        <article class="card">
+          <div class="image-container">
+            <img src="images/frameworks.png" alt="javascript frameworks and libraries"/>
+          </div>
+          <div class="text-container">
+            <h2>Top Javascript Frameworks 2019</h2>
+            <p>JavaScript community is known to be one of the most dynamic ones. Another day - another new framework. Has Vue.js surpassed React.js already? What to expect from the new version of Angular.js? Or have the new frameworks already emerged to take them all down?</p>
+            <a href="#">Find out now →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="image-container">
+            <img src="images/javascript.png" alt="javascript"/>
+          </div>
+          <div class="text-container">
+            <h2>Best JavaScript Learning Resources</h2>
+            <p>This is our curated list of Interactive learning tools and best books in JavaScript. From freeCodeCamp to “You don’t know JS” book series, be sure to check them all out and pick the best.</p>
+            <a href="#">Start learning →</a>
+          </div>
+        </article>
+      </section>
+      <section class="subscribe">
+        <article class="card">
+          <div class="text-container">
+            <h3>Subscribe to our monthly newsletter</h3>
+            <p>
+            We do send a newsletter with our newer articles,
+            also sometimes we highlight local meetups or important events.
+            You can check out an example of the newsletter <a href="#">here</a>.
+            <p>
+            <form method="post" enctype="text/plain" action="mailto:korshunadd@gmail.com">
+              <label for="email">
+                Your email
+                <input type="email" name="email" required/>
+              </label>
+              <input type="submit" value="SUBSCRIBE"/>
+            </form>
+          </div>
+        </article>
+      </section>
+      <section class="tutorials">
+        <div>
+          <span class="tag">How To</span>
+          <a href="#">See all tutorials →</a>
+        </div>
+        <article class='card'>
+          <div class="image-container flex items-center pa4">
+            <img src="images/webpack.png" alt="webpack logo"/>
+          </div>
+          <div class="text-container">
+            <h2>How to Setup Webpack</h2>
+            <p>Setting up Webpack is notoriously difficult. It has already become a scary tale that frontend developers like to tell each other.</p>
+            <a href="#">Read more →</a>
+          </div>
+        </article>
+        <article class='card'>
+          <div class="image-container">
+            <img src="images/modals.png" alt="Confirmation modal window with 'Howdy, I'm dialog box sally' text"/>
+          </div>
+          <div class="text-container">
+            <h2>Best Practices for Creating Modal Windows</h2>
+            <p>Crucial things to keep in mind when creating a modal window using React, Vue.js, or vanilla JavaScript.</p>
+            <a href="#">Read more →</a>
+          </div>
+        </article>
+        <article class='card last'>
+          <div class="image-container">
+            <img src="images/CSSorganization.png" alt="comic about murdering a website with improper styles and other CSS puns"/>
+          </div>
+          <div class="text-container">
+            <h2>Review of Modern Approaches to CSS Organization</h2>
+            <p>Maintaining CSS can be hard, especially when the website grows. Several approaches and naming conventions make it easier. </p>
+            <a href="#">Read more →</a>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="flex items-center">
+        <a href="facebook.com">
+          <img src="images/facebook.svg" alt="Frontend for beginners Facebook account"/>
+        </a>
+        <a href="telegram.com">
+          <img src="images/telegram.svg" alt="Frontend for beginners Telegram channel"/>
+        </a>
+        <a href="twitter.com">
+          <img src="images/twitter.svg" alt="Frontend for beginners Twitter account"/>
+        </a>
+        <a href="instagram.com">
+          <img src="images/instagram.svg" alt="Frontend for beginners Instagram account"/>
+        </a>
+      </div>
+      <p>© 2018 Frontend for Beginners</p>
+    </footer>
+  </body>
+</html>
+

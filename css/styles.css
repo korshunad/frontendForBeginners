@@ -1,0 +1,422 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Futura;
+  src: url('../fonts/futuramedium.ttf');
+}
+@font-face {
+  font-family: Avenir;
+  src: url('../fonts/AvenirLTStd-Book.otf');
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+body, p, span {
+  font-family: Avenir, Helvetica, sans-serif;
+  color: #1E1F21;
+}
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+p {
+  margin: 1em 0;
+}
+h1, h2, h3, nav ul li a, label, input, footer p {
+  font-family: Futura, Helvetics, sans-serif;
+}
+h1, h3, .code-left {
+  color: #D7666E;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  color: #1E1F21;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+h3 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+a {
+  color: #33BDB8;
+  padding: 2px;
+  border-bottom: solid 1px transparent;
+  font-family: Avenir, Helvetica, sans-serif;
+}
+a:hover {
+  color: #45EDE1;
+}
+a:active, a:focus {
+  border-bottom: solid 1px #33BDB8;
+}
+nav ul li a {
+  color: #1E1F21;
+  text-decoration: none;
+  border-bottom:solid 1px transparent;
+  padding: 5px;
+}
+nav ul li a:hover {
+  color: #5A5C60;
+}
+nav ul li a:active, nav ul li a:focus, nav ul li a.active {
+  text-decoration: none;
+  border-bottom:solid 1px #1E1F21;
+}
+.tag {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.code-right {
+  color: #F7D678;
+  font-family: 'PT Mono', monospace;
+}
+.code-left {
+  font-family: 'PT Mono', monospace;
+}
+.logo {
+  max-width: 150px;
+  height: auto;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.hero-banner {
+  background: linear-gradient(to bottom right, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url(../images/banner-bg.png);
+  background-size: cover;
+  padding: 50px;
+  text-align:center;
+  font-size: 1.6rem;
+}
+input[type="submit"] {
+  background-color: #33BDB8;
+  color: #ffffff;
+  padding: 0 1em;
+  line-height: 2em;
+  height: 2em;
+  cursor:pointer;
+}
+.subscribe input {
+  border: solid 2px #33BDB8;
+  font-family: Avenir, Helvetica, sans-serif !important;
+  border-radius: 0.1em;
+  font-size: 1.5em;
+}
+.subscribe label {
+  font-size: 1.5em;
+}
+
+footer a img {
+  max-width: 60px;
+  height: 60px;
+}
+footer a {
+  padding: 10px;
+}
+
+
+.card {
+  border: solid 2px #F7D678;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+p {
+  line-height: 2;
+  font-size: 1.1em;
+}
+@media (min-width: 1600px) {
+nav {
+  min-width: 36rem;
+}
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    padding: 50px;
+  }
+  main.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    padding: 50px;
+  }
+  section.mission {
+    place-self: end;
+  }
+  section.listicles {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    grid-template-rows: 1em auto;
+  }
+  section.listicles article {
+    grid-row-start: 2;
+  }
+  section.subscribe {
+    order: 2;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+  section.tutorials {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    grid-template-rows: 1em auto;
+  }
+  section.tutorials article {
+    grid-row-start: 2;
+  }
+  .card .text-container {
+    padding: 50px;
+  }
+  .image-container {
+    min-height: 26rem;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 1600px) and (min-width: 1200px) {
+nav {
+  min-width: 36rem;
+}
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+  }
+  section.tutorials, section.listicles, section.subscribe {
+    display: grid;
+    grid-gap: 30px;
+  }
+  section.listicles {
+    grid-column-start: 1;
+  }
+  section.subscribe {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+  section.tutorials {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-template-rows: 1em auto;
+
+  }
+  .card .text-container {
+    padding: 20px;
+  }
+  .image-container {
+    min-height: 16rem;
+  }
+}
+
+/* targeting tablet screens, including iPad with width 768 px and iPad Pro with width 1024px */
+ @media (max-width: 1200px) and (min-width: 700px) {
+ .logo {
+   max-width: 150px;
+ }
+ nav {
+   min-width: 25rem;
+ }
+  main {
+    display: grid;
+    grid-gap: 30px;
+    padding: 30px;
+  }
+  section.listicles, section.tutorials, section.subscribe {
+    display: grid;
+    grid-gap: 30px;
+  }
+  section.listicles {
+    display: grid;
+    grid-template-rows: 1em auto;
+  }
+  section.tutorials {
+    display: grid;
+    grid-template-rows: 1em auto;
+  }
+  section.listicles article, section.tutorials article {
+    grid-row-start: 2;
+  }
+  section.subscribe {
+    order: 2;
+  }
+  .card .text-container {
+    padding: 20px;
+  }
+  .subscribe form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .subscribe form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+ }
+@media (max-width: 700px) and (min-width: 520px) {
+  main {
+    display: grid;
+    grid-gap: 20px;
+    padding: 10px;
+  }
+  section.listicles, section.tutorials, section.subscribe {
+    display: grid;
+    grid-gap: 20px;
+  }
+  section.listicles, section.tutorials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1em auto;
+  }
+  section.listicles article, section.tutorials article {
+    grid-row-start: 2;
+  }
+  section.tutorials article.last {
+    grid-row-start: 3;
+  }
+  .card .text-container {
+    padding: 10px;
+  }
+  .subscribe form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .subscribe form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 520px) {
+  .avatar {
+    float: left;
+    max-width: 16rem;
+    width: 100%;
+    height: auto;
+    margin:15px 30px 10px 0;
+  }
+}
+/* targeting smaller screens, including iPhone 7 with 375px width */
+ @media (max-width: 520px) {
+  main {
+    display: grid;
+    grid-gap: 20px;
+    padding: 10px;
+  }
+  section.listicles, section.tutorials, section.subscribe {
+    display: grid;
+    grid-gap: 20px;
+  }
+  section.listicles {
+  }
+  section.subscribe {
+    order: 2;
+  }
+  section.tutorials {
+
+  }
+  .card .text-container {
+    padding: 10px;
+  }
+  .subscribe form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .subscribe form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .logo {
+    max-width: 150px;
+    height: auto;
+  }
+nav {
+  min-width: 50%;
+}
+ }
+footer {
+  min-height: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.pa4 {
+  padding: 2rem;
+}
+@media (max-width: 700px) {
+  header {
+    position: relative;
+  }
+  nav ul {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    background: white;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+  }
+  nav #burger-menu {
+    display: inline-block;
+  }
+  #close-menu {
+    font-weight: bolder;
+    font-size: 2em;
+    display: inline-block;
+  }
+  nav {
+    text-align: center;
+  }
+}
+@media (min-width: 700px) {
+  nav #burger-menu, #close-menu {
+    display: none;
+  }
+}
+.show {
+ visibility: visible;
+ display: flex;
+ opacity:1;
+}
