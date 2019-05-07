@@ -2,7 +2,7 @@ import React from "react";
 
 export default () => (
   <footer>
-    <div class="flex items-center">
+    <div className="flex items-center">
       <a href="facebook.com">
         <img src="facebook.svg" alt="Frontend for beginners Facebook account"/>
       </a>

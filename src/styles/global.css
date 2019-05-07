@@ -142,11 +142,12 @@ img {
   height: auto;
 }
 .hero-banner {
-  background: linear-gradient(to bottom right, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url(/banner-bg.png);
+  background: linear-gradient(to bottom right, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url(/frontend_image.png);
   background-size: cover;
   padding: 50px;
   text-align:center;
   font-size: 1.6rem;
+  background-position: center;
 }
 input[type="submit"] {
   background-color: #33BDB8;
@@ -186,9 +187,9 @@ p {
   font-size: 1.1em;
 }
 @media (min-width: 1600px) {
-nav {
-  min-width: 36rem;
-}
+  nav {
+    min-width: 36rem;
+  }
   main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -256,9 +257,11 @@ nav {
   section.tutorials, section.listicles, section.subscribe {
     display: grid;
     grid-gap: 30px;
+    place-items: start;
   }
   section.listicles {
     grid-column-start: 1;
+    grid-template-rows: 1em auto;
   }
   section.subscribe {
     grid-column-start: 1;

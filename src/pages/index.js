@@ -1,4 +1,6 @@
 import React from "react";
+import { graphql } from "gatsby"
+
 import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -6,7 +8,7 @@ import HeroBanner from "../components/HeroBanner";
 import FeaturedArticleTile from "../components/FeaturedArticleTile";
 import SmallArticle from "../components/SmallArticle";
 
-export default () => (
+export default ({data}) => (
   <React.Fragment>
     <Helmet>
       <meta charSet="utf-8" />
@@ -23,53 +25,39 @@ export default () => (
           link={"#"}
         />
       </section>
-      <section class="listicles">
+      <section className="listicles">
         <div>
-          <span class="tag">Listicles</span>
+          <span className="tag">Listicles</span>
           <a href="#">See all lists →</a>
         </div>
         <SmallArticle
-          title="Top Javascript Frameworks 2019"
-          shortDescription="JavaScript community is known to be one of the most dynamic ones. Another day - another new framework. Has Vue.js surpassed React.js already? What to expect from the new version of Angular.js? Or have the new frameworks already emerged to take them all down?"
+          title="Common CSS organization approaches"
+          shortDescription="Maintaining CSS can be hard, especially when the website grows. Several approaches and naming conventions make it easier."
           link="#"
-          imgSrc="frameworks.png"
-          imgAlt="javascript frameworks and libraries"
-        />
-        <SmallArticle
-          title="Top Javascript Frameworks 2019"
-          shortDescription="JavaScript community is known to be one of the most dynamic ones. Another day - another new framework. Has Vue.js surpassed React.js already? What to expect from the new version of Angular.js? Or have the new frameworks already emerged to take them all down?"
-          link="#"
-          imgSrc="frameworks.png"
+          imgSrc="CSSorganization.png"
           imgAlt="javascript frameworks and libraries"
         />
       </section>
       <section className="subscribe">
       </section>
-      <section class="tutorials">
+      <section className="tutorials">
         <div>
-          <span class="tag">How To</span>
+          <span className="tag">How To</span>
           <a href="#">See all tutorials →</a>
         </div>
         <SmallArticle
-          title="Top Javascript Frameworks 2019"
-          shortDescription="JavaScript community is known to be one of the most dynamic ones. Another day - another new framework. Has Vue.js surpassed React.js already? What to expect from the new version of Angular.js? Or have the new frameworks already emerged to take them all down?"
+          title="How to create a jQuery toggle button"
+          shortDescription="A simple toggle button with CSS and jQuery"
           link="#"
-          imgSrc="frameworks.png"
-          imgAlt="javascript frameworks and libraries"
+          imgSrc="jQuery-toggle-button.png"
+          imgAlt="jQuery toggle button"
         />
         <SmallArticle
-          title="Top Javascript Frameworks 2019"
-          shortDescription="JavaScript community is known to be one of the most dynamic ones. Another day - another new framework. Has Vue.js surpassed React.js already? What to expect from the new version of Angular.js? Or have the new frameworks already emerged to take them all down?"
+          title="Tap animation with SVG, @keyframes and jQuery"
+          shortDescription="Let's build an engaging tap animation (clckable as well) with SVG, @keyframes and jQuery"
           link="#"
-          imgSrc="frameworks.png"
-          imgAlt="javascript frameworks and libraries"
-        />
-        <SmallArticle
-          title="Top Javascript Frameworks 2019"
-          shortDescription="JavaScript community is known to be one of the most dynamic ones. Another day - another new framework. Has Vue.js surpassed React.js already? What to expect from the new version of Angular.js? Or have the new frameworks already emerged to take them all down?"
-          link="#"
-          imgSrc="frameworks.png"
-          imgAlt="javascript frameworks and libraries"
+          imgSrc="tap-me.png"
+          imgAlt="tap animation"
         />
       </section>
     </main>
@@ -77,3 +65,12 @@ export default () => (
   </React.Fragment>
 
 );
+export const query = graphql`
+query {
+  site {
+    siteMetadata {
+      title
+    }
+  }
+}
+`
