@@ -1,25 +1,6 @@
 import React from "react";
 import Layout from '../components/Layout';
-
-const authors = [
-  {
-    name: 'Ana',
-    bio: 'After a long journey in cultural studies and management science, Ana realized that code speaks louder than words. Since that time her major areas of focus are Vim, React, and Tachyons. She likes to write overviews of approaches to frontend development and cats.',
-    imgSrc:'/ana.png'
-  }
-];
-
-const Author = ({imgSrc, name, bio}) => (
-  <div className="pb6-l pb4 mw50-l">
-    <div className="flex flex-column items-center fl mr4 mb2">
-      <h2>{name}</h2>
-      <div className="br-pill " style={{backgroundImage: `url(${imgSrc})`, backgroundSize: '100% 100%', backgroundPosition: 'center', height: '7rem', width: '7rem'}}></div>
-    </div>
-    <p>
-      {bio}
-    </p>
-  </div>
-);
+import {authors, Author} from '../components/Author';
 
 export default ({data}) => (
   <Layout title="about us" bannerMessage="about">

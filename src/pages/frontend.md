@@ -1,10 +1,13 @@
 ---
-title: "So what is frontend?"
+title: "So what is Frontend development?"
 category: "overview"
 tags: ["css", "html", "beginner"]
 imgSrc: ""
 imgAlt: ""
 summary: ""
+author: "Annie Phan"
+imagePreview: "/what_is_frontend.png"
+metaDescr: "Quick summary of what the frontend development is about."
 date: "2019-05-09"
 ---
 
@@ -39,21 +42,21 @@ Lastly, Javascript is the functional aspect of the web site which takes user inp
 While they do design and code the visual aspect of a website, in additional, they perform other tasks as well:
 <ul style="line-height: 2;">
   <li>
-    tailor the user experience;
+    <span class="red mr3">●</span>tailor the user experience;
   </li>
   <li>
-    modify and maintain web application interfaces;
+    <span class="red mr3">●</span>modify and maintain web application interfaces;
   </li>
   <li>
-    implement responsive design for mobile sites;
+    <span class="red mr3">●</span>implement responsive design for mobile sites;
   </li>
   <li>
-    look after the software workflow;
+    <span class="red mr3">●</span>look after the software workflow;
   </li>
   <li>
-    consult on SEO best practices;
+    <span class="red mr3">●</span>consult on SEO best practices;
   </li>
   <li>
-    and lastly, test the site during development for usability and fix any bugs.
+    <span class="red mr3">●</span>and lastly, test the site during development for usability and fix any bugs.
   </li>
 </ul>
