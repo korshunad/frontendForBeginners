@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "gatsby": "^2.3.34",
+    "gatsby-plugin-crisp-chat": "^3.0.0",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-source-filesystem": "^2.0.33",
     "gatsby-transformer-remark": "^2.3.12",

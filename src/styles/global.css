@@ -14,6 +14,14 @@
    License: none (public domain)
    resets
 */
+#___gatsby {
+  height: 100%;
+}
+#___gatsby > div {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -72,8 +80,6 @@ main {
   min-height: 33vh;
 }
 body {
-  display: grid;
-  grid-template-rows: auto auto 1fr auto;
 }
 p {
   margin: 1em 0;
@@ -191,27 +197,33 @@ p {
     min-width: 36rem;
   }
   main {
+  /*
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
     padding: 50px;
+    */
   }
   main.about {
+  /*
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     padding: 50px;
+    */
   }
   section.mission {
     place-self: end;
   }
   section.listicles {
+  /*
     grid-column-start: 2;
     grid-column-end: span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     grid-template-rows: 1em auto;
+    */
   }
   section.listicles article {
     grid-row-start: 2;
@@ -222,6 +234,7 @@ p {
     grid-column-end: span 2;
   }
   section.tutorials {
+  /*
     display: grid;
     grid-column-start: 1;
     grid-column-end: span 3;
@@ -229,6 +242,7 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
     grid-template-rows: 1em auto;
+    */
   }
   section.tutorials article {
     grid-row-start: 2;
@@ -248,6 +262,7 @@ p {
 nav {
   min-width: 36rem;
 }
+/*
   main {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -274,6 +289,7 @@ nav {
     grid-template-rows: 1em auto;
 
   }
+  */
   .card .text-container {
     padding: 20px;
   }
@@ -290,6 +306,7 @@ nav {
  nav {
    min-width: 25rem;
  }
+ /*
   main {
     display: grid;
     grid-gap: 30px;
@@ -313,6 +330,7 @@ nav {
   section.subscribe {
     order: 2;
   }
+  */
   .card .text-container {
     padding: 20px;
   }
@@ -327,6 +345,7 @@ nav {
   }
  }
 @media (max-width: 700px) and (min-width: 520px) {
+/*
   main {
     display: grid;
     grid-gap: 20px;
@@ -347,6 +366,7 @@ nav {
   section.tutorials article.last {
     grid-row-start: 3;
   }
+  */
   .card .text-container {
     padding: 10px;
   }
@@ -371,6 +391,7 @@ nav {
 }
 /* targeting smaller screens, including iPhone 7 with 375px width */
  @media (max-width: 520px) {
+ /*
   main {
     display: grid;
     grid-gap: 20px;
@@ -385,6 +406,7 @@ nav {
   section.subscribe {
     order: 2;
   }
+  */
   section.tutorials {
 
   }
@@ -455,6 +477,7 @@ header ul {
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
+    z-index:5;
   }
   nav #burger-menu {
     display: inline-block;
@@ -477,4 +500,22 @@ header ul {
  visibility: visible;
  display: flex;
  opacity:1;
+}
+.article-tag {
+  background-color: #33BDB8;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+@media (min-width: 60em) {
+  .mw50-l {
+    max-width: calc(50% - 4rem);
+  }
+.sticky-l {
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
 }

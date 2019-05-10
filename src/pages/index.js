@@ -1,68 +1,92 @@
 import React from "react";
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
-import { Helmet } from "react-helmet";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import HeroBanner from "../components/HeroBanner";
+import Layout from '../components/Layout';
 import FeaturedArticleTile from "../components/FeaturedArticleTile";
 import SmallArticle from "../components/SmallArticle";
 
+const Featured = ({data}) => {
+  const featured = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "featured");
+  if (featured.length !== 0) {
+    return featured.map(({ node }) => (
+      <FeaturedArticleTile
+        key={node.id}
+        title={node.frontmatter.title}
+        shortDescription={node.frontmatter.summary || node.excerpt}
+        link={node.fields.slug}
+      />
+    ));
+  } else {
+    return (
+      <FeaturedArticleTile
+        title="Welcome to the blog about frontend development!"
+        shortDescription="Modern frontend development is a very dynamic and turbulent sphere. Lots of new frameworks, tools, approaches appear every day. And information about them is often chaotic, unstructured and sometimes incomplete. Here you will find reviews of tools and workflows, tutorials and guides. We focus onto helping you to start and improve your day-to-day frontend development routines and to write clear, maintainable JS code, CSS and HTML."
+        link="/about/"
+      />
+    );
+  }
+}
+
+const Overviews = ({data}) => {
+  const overviews = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "overview");
+  return (
+    <section className={`listicles ${overviews.length > 1 ? 'w-100-l' : 'w-40-l'} w-100 ${overviews.length === 0 ? 'dn': 'db'}`}>
+      <div>
+      <span className="tag">Overviews</span>
+      <Link to="/overview/">See all lists →</Link>
+      </div>
+      <div className="flex flex-row-ns flex-column w-100 flex-wrap">
+        {overviews.map(({ node }) => (
+          <SmallArticle
+            key={node.id}
+            title={node.frontmatter.title}
+            shortDescription={node.frontmatter.summary || node.excerpt}
+            link={node.fields.slug}
+            imgSrc={node.frontmatter.imgSrc}
+            imgAlt={node.frontmatter.imgAlt}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const Tutorials = ({data}) => {
+  const tutorials = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "how-to");
+  return (
+    <section className={`tutorials ${tutorials.length > 1 ? 'w-100-l' : 'w-50-l'} w-100 ${tutorials.length === 0 ? 'dn' : 'db'}`}>
+      <div>
+      <span className="tag">Tutorials</span>
+      <Link to="/how-to/">See all tutorials →</Link>
+      </div>
+      <div className="flex flex-row-ns flex-column w-100 flex-wrap">
+        {tutorials.map(({ node }) => (
+          <SmallArticle
+            key={node.id}
+            title={node.frontmatter.title}
+            shortDescription={node.frontmatter.summary || node.excerpt}
+            link={node.fields.slug}
+            imgSrc={""}
+            imgAlt={""}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default ({data}) => (
-  <React.Fragment>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Frontend for Beginners</title>
-      <link rel="canonical" href="http://mysite.com/example" />
-    </Helmet>
-    <Header/>
-    <HeroBanner message="Hello World!"/>
-    <main>
-      <section>
-        <FeaturedArticleTile
-          title={"Ultimate guide to centering with CSS in 2018"}
-          shortDescription={<span>Hello world!  It’s 2018 and still one of the most daunting CSS-related questions is the centering of the elements on a page. Recently a <a href='http://howtocenterincss.com/' rel='noopener noreferrer'>CSS centering code generator</a> topped  1036 upvotes on HackerNews. Yet, our editorial staff doesn’t think it’s a solution for everything (<a href='#'>see the review</a>). So we compiled our own guide for you to get all the practices for CSS centering in one place.</span>}
-          link={"#"}
-        />
-      </section>
-      <section className="listicles">
-        <div>
-          <span className="tag">Listicles</span>
-          <a href="#">See all lists →</a>
-        </div>
-        <SmallArticle
-          title="Common CSS organization approaches"
-          shortDescription="Maintaining CSS can be hard, especially when the website grows. Several approaches and naming conventions make it easier."
-          link="#"
-          imgSrc="CSSorganization.png"
-          imgAlt="javascript frameworks and libraries"
-        />
-      </section>
-      <section className="subscribe">
-      </section>
-      <section className="tutorials">
-        <div>
-          <span className="tag">How To</span>
-          <a href="#">See all tutorials →</a>
-        </div>
-        <SmallArticle
-          title="How to create a jQuery toggle button"
-          shortDescription="A simple toggle button with CSS and jQuery"
-          link="#"
-          imgSrc="jQuery-toggle-button.png"
-          imgAlt="jQuery toggle button"
-        />
-        <SmallArticle
-          title="Tap animation with SVG, @keyframes and jQuery"
-          shortDescription="Let's build an engaging tap animation (clckable as well) with SVG, @keyframes and jQuery"
-          link="#"
-          imgSrc="tap-me.png"
-          imgAlt="tap animation"
-        />
-      </section>
+  <Layout title="Frontend for Beginners" bannerMessage="Hello World!">
+  <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-start justify-start">
+  <section className="featured w-60-ns w-100 pr5">
+    <Featured data={data}/>
+  </section>
+  <Overviews data={data}/>
+  <Tutorials data={data}/>
+  <section className="subscribe">
+  </section>
     </main>
-    <Footer/>
-  </React.Fragment>
+  </Layout>
 
 );
 export const query = graphql`
@@ -70,6 +94,27 @@ query {
   site {
     siteMetadata {
       title
+    }
+  }
+  allMarkdownRemark {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "DD MMMM, YYYY")
+          summary
+          category
+          tags
+          imgSrc
+          imgAlt
+        }
+        fields {
+          slug
+        }
+        excerpt
+      }
     }
   }
 }
