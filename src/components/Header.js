@@ -5,7 +5,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bmVisible: window.innerWidth < 700 ? false : true
+      bmVisible: false
     }
     this.toggleBurgerMenu = this.toggleBurgerMenu.bind(this);
   }
