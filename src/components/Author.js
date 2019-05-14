@@ -9,7 +9,7 @@ const authors = [
   },
   {
     name: 'Takako Nakajima',
-    bio: 'Cat person. Gluten-free. Oil painting major, 4 years of design work experience. People in Web development are self-driven, she is an eager learner as well, she likes people in the industry. My current favorites are JavaScript and SVG animation.',
+    bio: 'Cat person. Gluten-free. Oil painting major, 4 years of design work experience. People in Web development are self-driven, she is an eager learner as well, she likes people in the industry. Her current favorites are JavaScript and SVG animation.',
     imgSrc:'/takako.jpg'
   },
   {
