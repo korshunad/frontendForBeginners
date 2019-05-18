@@ -47,13 +47,13 @@ class Header extends React.Component {
         <nav>
           <ul className="pointer" id="menu-links" style={{visibility: bmVisible ? 'visible' : 'hidden', opacity: bmVisible ? '1' : '0'}}>
             <li>
-              <Link to="/how-to/">
-                How to
+              <Link to="/tutorials/">
+                Tutorials
               </Link>
             </li>
             <li>
-              <Link to="/overview/">
-                Overview
+              <Link to="/articles/">
+                Articles
               </Link>
             </li>
             <li>

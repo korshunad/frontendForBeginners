@@ -17,7 +17,7 @@ const TagsPage = ({
   }
 }) => {
   const currentTag = group.filter(tag => location.pathname.indexOf(tag.fieldValue) !== -1);
-  const taggedArticles = edges.filter(node => node.node.frontmatter.tags.indexOf(currentTag));
+  const taggedArticles = edges.filter(node => (node.node.frontmatter.tags.indexOf(currentTag[0].fieldValue) > -1));
   return (
     <Layout title={currentTag[0].fieldValue} dir="tags" bannerMessage={currentTag[0].fieldValue}>
      <main className="pa5-l pa4-m pa3 flex flex-row-reverse-l flex-column items-start justify-start relative">
@@ -30,6 +30,7 @@ const TagsPage = ({
             link={node.fields.slug}
             imgSrc={node.frontmatter.imgSrc}
             imgAlt={node.frontmatter.imgAlt}
+            limitWidth={taggedArticles.length > 1}
           />
         ))}
       </div>

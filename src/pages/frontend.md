@@ -1,6 +1,6 @@
 ---
 title: "So what is Frontend development?"
-category: "overview"
+category: "articles"
 tags: ["css", "html", "beginner"]
 imgSrc: ""
 imgAlt: ""

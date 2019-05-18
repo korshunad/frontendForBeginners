@@ -1,11 +1,11 @@
 ---
 title: "What is HTML?"
-category: "overview"
-tags: ["css", "html", "beginner"]
+category: "articles"
+tags: ["html5", "html", "beginner"]
 imgSrc: ""
 imgAlt: ""
 author: "Annie Phan"
-imagePreview: "/what_is_html.png"
+imagePreview: "/html-css-intro.png"
 metaDescr: "What is HTML and the joys of HTML5"
 summary: "What is HTML? How to use it? Why HTML5 is cool? Find out with our quick intro into what is HTML"
 date: "2019-05-16"
@@ -82,14 +82,12 @@ HTML5 is the new standard of HTML and it introduces some exciting functionalitie
 <span class="red mr3">●</span>New <code>input</code> types and custom ui elements for them, such as <code>type="date"</code> or <code>type="range"</code>. You don't have to build those yourselves with JavaScript.
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="HTML5 input elements" src="//codepen.io/korshunad/embed/EzXZgy/?height=265&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-See the Pen <a href='https://codepen.io/korshunad/pen/EzXZgy/'>HTML5 input elements</a> by Anastasiia Korshunova
-(<a href='https://codepen.io/korshunad'>@korshunad</a>) on <a href='https://codepen.io'>CodePen</a>.
+See the Pen <a target="_blank" rel="noopener noreferrer"  href='https://codepen.io/korshunad/pen/EzXZgy/'>HTML5 input elements</a> on Codepen.
 </iframe>
 
 <span class="red mr3">●</span>Multimedia support with <code>\<video\></code> and <code>\<audio\></code> tags
 <iframe height="540" style="width: 100%;" scrolling="no" title="HTML5 Multimedia support" src="//codepen.io/korshunad/embed/YbQNvv/?height=540&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/korshunad/pen/YbQNvv/'>HTML5 Multimedia support</a> by Anastasiia Korshunova
-    (<a href='https://codepen.io/korshunad'>@korshunad</a>) on <a href='https://codepen.io'>CodePen</a>.
+  See the Pen <a  target="_blank" rel="noopener noreferrer" href='https://codepen.io/korshunad/pen/YbQNvv/'>HTML5 Multimedia support</a> on Codepen
     </iframe>
 
 <span class="red mr3">●</span>Editable content with <code>contenteditable="true"</code> attribute.
@@ -97,17 +95,15 @@ See the Pen <a href='https://codepen.io/korshunad/pen/EzXZgy/'>HTML5 input eleme
 
 <span class="red mr3">●</span>2D graphics with <code>canvas</code> and 3D graphics with WebGL
 
-Canvas example from <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations" title="">MDN docs</a>
+Canvas example from <a  target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations" title="">MDN docs</a>
 <iframe height="413" style="width: 100%;" scrolling="no" title="An animated solar system (MDN docs canvas example)" src="//codepen.io/korshunad/embed/WBOjYg/?height=413&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/korshunad/pen/WBOjYg/'>An animated solar system (MDN docs canvas example)</a> by Anastasiia Korshunova
-    (<a href='https://codepen.io/korshunad'>@korshunad</a>) on <a href='https://codepen.io'>CodePen</a>.
+  See the Pen <a href='https://codepen.io/korshunad/pen/WBOjYg/' target="_blank" rel="noopener noreferrer" >An animated solar system (MDN docs canvas example)</a> on Codepen
     </iframe>
 
 
-WebGL example from <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL" title="MDN docs">MDN docs</a>
+WebGL example from <a  target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL" title="MDN docs">MDN docs</a>
 <iframe height="468" style="width: 100%;" scrolling="no" title="WebGl Cube example (by MDN)" src="//codepen.io/korshunad/embed/BeZJVK/?height=468&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/korshunad/pen/BeZJVK/'>WenGl Cube example (by MDN)</a> by Anastasiia Korshunova
-    (<a href='https://codepen.io/korshunad'>@korshunad</a>) on <a href='https://codepen.io'>CodePen</a>.
+  See the Pen <a href='https://codepen.io/korshunad/pen/BeZJVK/' target="_blank" rel="noopener noreferrer" >WebGl Cube example (by MDN)</a> on Codepen.
     </iframe>
 
-<span class="red mr3">●</span>... and many more exciting things which we'll introduce in next articles! Stay tuned 😎
+<span class="red mr3">●</span>... and many more exciting and useful features which we'll introduce in next articles! Stay tuned 😎
