@@ -27,10 +27,9 @@ const Featured = ({data}) => {
   }
 }
 
-const Overviews = ({data}) => {
-  const overviews = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "overview");
+const Overviews = ({overviews}) => {
   return (
-    <section className={`listicles ${overviews.length > 1 ? 'w-100-l' : 'w-40-l'} w-100 ${overviews.length === 0 ? 'dn': 'db'}`}>
+    <section className={`listicles ${overviews.length > 1 ? 'w-100-l pt4' : 'w-40-l'} w-100 ${overviews.length === 0 ? 'dn': 'db'}`}>
       <div>
       <span className="tag">Overviews</span>
       <Link to="/overview/">See all lists →</Link>
@@ -44,6 +43,7 @@ const Overviews = ({data}) => {
             link={node.fields.slug}
             imgSrc={node.frontmatter.imgSrc}
             imgAlt={node.frontmatter.imgAlt}
+            limitWidth={overviews.length > 1}
           />
         ))}
       </div>
@@ -51,8 +51,7 @@ const Overviews = ({data}) => {
   );
 }
 
-const Tutorials = ({data}) => {
-  const tutorials = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "how-to");
+const Tutorials = ({tutorials}) => {
   return (
     <section className={`tutorials ${tutorials.length > 1 ? 'w-100-l' : 'w-50-l'} w-100 ${tutorials.length === 0 ? 'dn' : 'db'}`}>
       <div>
@@ -75,20 +74,25 @@ const Tutorials = ({data}) => {
   );
 }
 
-export default ({data}) => (
-  <Layout title="Frontend for Beginners" bannerMessage="Hello World!">
-  <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-start justify-start">
-  <section className="featured w-60-ns w-100 pr5">
-    <Featured data={data}/>
-  </section>
-  <Overviews data={data}/>
-  <Tutorials data={data}/>
-  <section className="subscribe">
-  </section>
-    </main>
-  </Layout>
+export default ({data}) => {
+  const overviews = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "overview");
+  const tutorials = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "how-to");
+  return (
+    <Layout title="Frontend for Beginners" bannerMessage="Hello World!">
+    <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-start justify-start">
+    <section className={`${ overviews.length > 1 ? 'w-70-ns' : 'w-60-ns' } featured w-100 pr5`}>
+      <Featured data={data}/>
+    </section>
+    <Overviews overviews={overviews}/>
+    <Tutorials tutorials={tutorials}/>
+    <section className="subscribe">
+    </section>
+      </main>
+    </Layout>
 
-);
+  );
+}
+
 export const query = graphql`
 query {
   site {
