@@ -1,8 +1,8 @@
 import React from "react";
 import {Link} from "gatsby";
 
-export default ({title, shortDescription, link, imgSrc, imgAlt}) => (
-  <article className="card w-100 mr3-ns mt3-ns">
+export default ({title, shortDescription, link, imgSrc, imgAlt, limitWidth}) => (
+  <article className={`${limitWidth ? 'w-45-l w-100' : 'w-100'} card mr3-ns mt3-ns`}>
     {imgSrc &&
     <div className="image-container">
       <img src={imgSrc} alt={imgAlt}/>

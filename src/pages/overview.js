@@ -17,6 +17,7 @@ const Overviews = ({data}) => {
             link={node.fields.slug}
             imgSrc={node.frontmatter.imgSrc}
             imgAlt={node.frontmatter.imgAlt}
+            limitWidth={overviews.length > 1}
           />
         ))}
       </div>

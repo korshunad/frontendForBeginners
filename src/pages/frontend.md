@@ -4,10 +4,10 @@ category: "overview"
 tags: ["css", "html", "beginner"]
 imgSrc: ""
 imgAlt: ""
-summary: ""
 author: "Annie Phan"
 imagePreview: "/what_is_frontend.png"
 metaDescr: "Quick summary of what the frontend development is about."
+summary: "What is Frontend development and which skills should front-end developer have"
 date: "2019-05-09"
 ---
 

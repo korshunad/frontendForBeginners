@@ -522,3 +522,8 @@ header ul {
 .red {
   color: ##D7666E;
 }
+@media (min-width: 60em) {
+ .w-45-l {
+   width: 45% !important;
+ }
+}
