@@ -8,7 +8,7 @@ const Tag = ({tag}) => (
   <Link to={`/tags/${tag}`} className="article-tag pv2 ph3 dim br2 ma2 w-auto">{tag}</Link>
 )
 
-export default ({ data }) => {
+export default ({ data, location }) => {
   const post = data.markdownRemark;
   const author = authors.filter(author => author.name === post.frontmatter.author)[0];
   return (
@@ -18,6 +18,7 @@ export default ({ data }) => {
       bannerMessage={post.frontmatter.title}
       imagePreview={post.frontmatter.imagePreview}
       metaDescr={post.frontmatter.metaDescr}
+      location={location.href}
     >
       <main className="pa5-l pa4-m pa3 flex flex-row-l flex-column items-start justify-start relative">
         <div className="flex flex-column w-two-thirds-l w-100">
