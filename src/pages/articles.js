@@ -4,12 +4,12 @@ import {graphql } from "gatsby"
 import Layout from '../components/Layout';
 import SmallArticle from "../components/SmallArticle";
 
-const Overviews = ({data}) => {
-  const overviews = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "overview");
+const Articles = ({data}) => {
+  const articles = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "articles");
   return (
-    <section className={`listicles ${overviews.length > 1 ? 'w-100-l' : 'w-40-l'} w-100 ${overviews.length === 0 ? 'dn': 'db'}`}>
+    <section className={`listicles ${articles.length > 1 ? 'w-100-l' : 'w-40-l'} w-100 ${articles.length === 0 ? 'dn': 'db'}`}>
       <div className="flex flex-row-ns flex-column w-100 flex-wrap">
-        {overviews.map(({ node }) => (
+        {articles.map(({ node }) => (
           <SmallArticle
             key={node.id}
             title={node.frontmatter.title}
@@ -17,7 +17,7 @@ const Overviews = ({data}) => {
             link={node.fields.slug}
             imgSrc={node.frontmatter.imgSrc}
             imgAlt={node.frontmatter.imgAlt}
-            limitWidth={overviews.length > 1}
+            limitWidth={articles.length > 1}
           />
         ))}
       </div>
@@ -26,9 +26,9 @@ const Overviews = ({data}) => {
 }
 
 export default ({data}) => (
-  <Layout title="Frontend for Beginners" bannerMessage="overviews">
+  <Layout title="Frontend for Beginners" bannerMessage="articles">
   <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-start justify-start">
-  <Overviews data={data}/>
+  <Articles data={data}/>
     </main>
   </Layout>
 

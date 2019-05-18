@@ -27,15 +27,15 @@ const Featured = ({data}) => {
   }
 }
 
-const Overviews = ({overviews}) => {
+const Articles = ({articles}) => {
   return (
-    <section className={`listicles ${overviews.length > 1 ? 'w-100-l pt4' : 'w-40-l'} w-100 ${overviews.length === 0 ? 'dn': 'db'}`}>
+    <section className={`listicles ${articles.length > 1 ? 'w-100-l pt4' : 'w-40-l'} w-100 ${articles.length === 0 ? 'dn': 'db'}`}>
       <div>
-      <span className="tag">Overviews</span>
-      <Link to="/overview/">See all lists →</Link>
+      <span className="tag">Articles</span>
+      <Link to="/articles/">See all →</Link>
       </div>
       <div className="flex flex-row-ns flex-column w-100 flex-wrap">
-        {overviews.map(({ node }) => (
+        {articles.map(({ node }) => (
           <SmallArticle
             key={node.id}
             title={node.frontmatter.title}
@@ -43,7 +43,7 @@ const Overviews = ({overviews}) => {
             link={node.fields.slug}
             imgSrc={node.frontmatter.imgSrc}
             imgAlt={node.frontmatter.imgAlt}
-            limitWidth={overviews.length > 1}
+            limitWidth={articles.length > 1}
           />
         ))}
       </div>
@@ -56,7 +56,7 @@ const Tutorials = ({tutorials}) => {
     <section className={`tutorials ${tutorials.length > 1 ? 'w-100-l' : 'w-50-l'} w-100 ${tutorials.length === 0 ? 'dn' : 'db'}`}>
       <div>
       <span className="tag">Tutorials</span>
-      <Link to="/how-to/">See all tutorials →</Link>
+      <Link to="/tutorials/">See all tutorials →</Link>
       </div>
       <div className="flex flex-row-ns flex-column w-100 flex-wrap">
         {tutorials.map(({ node }) => (
@@ -75,15 +75,15 @@ const Tutorials = ({tutorials}) => {
 }
 
 export default ({data}) => {
-  const overviews = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "overview");
-  const tutorials = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "how-to");
+  const articles = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "articles");
+  const tutorials = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "tutorials");
   return (
     <Layout title="Frontend for Beginners" bannerMessage="Hello World!">
     <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-start justify-start">
-    <section className={`${ overviews.length > 1 ? 'w-70-ns' : 'w-60-ns' } featured w-100 pr5`}>
+    <section className={`${ articles.length > 1 ? 'w-70-ns' : 'w-60-ns' } featured w-100 pr5`}>
       <Featured data={data}/>
     </section>
-    <Overviews overviews={overviews}/>
+    <Articles articles={articles}/>
     <Tutorials tutorials={tutorials}/>
     <section className="subscribe">
     </section>
