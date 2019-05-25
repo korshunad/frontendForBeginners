@@ -527,3 +527,11 @@ header ul {
    width: 45% !important;
  }
 }
+button {
+  background-color: #33BDB8;
+  box-shadow: none;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: .25rem;
+}

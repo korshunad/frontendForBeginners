@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import SmallArticle from "../components/SmallArticle";
 
 const Tutorials = ({data}) => {
-  const tutorials = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "how-to");
+  const tutorials = data.allMarkdownRemark.edges.filter(node => node.node.frontmatter.category === "tutorials");
   if (tutorials.length > 0) {
     return (
       <section className={`listicles ${tutorials.length > 1 ? 'w-100-l' : 'w-40-l'} w-100 ${tutorials.length === 0 ? 'dn': 'db'}`}>
@@ -33,7 +33,7 @@ const Tutorials = ({data}) => {
 }
 
 export default ({data}) => (
-  <Layout title="Frontend for Beginners" bannerMessage="how to">
+  <Layout title="Frontend for Beginners" bannerMessage="tutorials">
   <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-center justify-center" style={{minHeight: "10px"}}>
   <Tutorials data={data}/>
     </main>
