@@ -53,7 +53,7 @@ const Articles = ({articles}) => {
 
 const Tutorials = ({tutorials}) => {
   return (
-    <section className={`tutorials ${tutorials.length > 1 ? 'w-100-l' : 'w-50-l'} w-100 ${tutorials.length === 0 ? 'dn' : 'db'}`}>
+    <section className={`tutorials ${tutorials.length > 1 ? 'w-100-l' : 'w-100-l'} pt4 w-100 ${tutorials.length === 0 ? 'dn' : 'db'}`}>
       <div>
       <span className="tag">Tutorials</span>
       <Link to="/tutorials/">See all tutorials →</Link>
@@ -65,8 +65,9 @@ const Tutorials = ({tutorials}) => {
             title={node.frontmatter.title}
             shortDescription={node.frontmatter.summary || node.excerpt}
             link={node.fields.slug}
-            imgSrc={""}
-            imgAlt={""}
+            imgSrc={node.frontmatter.imgSrc}
+            imgAlt={node.frontmatter.imgAlt}
+            limitWidth={true}
           />
         ))}
       </div>
@@ -84,6 +85,7 @@ export default ({data}) => {
       <Featured data={data}/>
     </section>
     <Articles articles={articles}/>
+    <br className={articles ? 'db mt4' : 'dn'}/>
     <Tutorials tutorials={tutorials}/>
     <section className="subscribe">
     </section>
