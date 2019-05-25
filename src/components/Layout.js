@@ -26,7 +26,6 @@ export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, 
   <meta name="twitter:description" content={metaDescr ? metaDescr : 'Frontend for Beginner is a blog for aspiring frontend developers with Javascript, HTML and CSS tutorials and work processes overviews'}/>
   <meta name="description" content={metaDescr ? metaDescr : 'Frontend for Beginner is a blog for aspiring frontend developers with Javascript, HTML and CSS tutorials and work processes overviews'}/>
   <meta itemprop="description" content={metaDescr ? metaDescr : 'Frontend for Beginner is a blog for aspiring frontend developers with Javascript, HTML and CSS tutorials and work processes overviews'}/>
-  <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
 
   </Helmet>
   <Header/>

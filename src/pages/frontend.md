@@ -37,7 +37,7 @@ Lastly, Javascript is the functional aspect of the web site which takes user inp
 <br/>
 
 
-i##What else do Front End Developers do?
+##What else do Front End Developers do?
 
 While they do design and code the visual aspect of a website, in additional, they perform other tasks as well:
 <ul style="line-height: 2;">
