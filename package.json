@@ -10,7 +10,13 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "lint": "eslint src/**/*.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "echo $HUSKY_GIT_PARAMS"
+    }
   },
   "dependencies": {
     "gatsby": "^2.3.34",
@@ -25,6 +31,9 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^2.3.0",
     "prettier": "^1.17.0"
   },
   "repository": {
