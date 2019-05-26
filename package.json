@@ -10,12 +10,13 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "lint": "eslint src/**/*.js",
+    "lint": "eslint src/**/*.js --fix",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "husky": {
     "hooks": {
-      "commit-msg": "echo $HUSKY_GIT_PARAMS"
+      "commit-msg": "echo $HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint"
     }
   },
   "dependencies": {
