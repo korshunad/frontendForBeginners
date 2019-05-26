@@ -1,5 +1,5 @@
 import React from "react";
-import {graphql } from "gatsby"
+import {graphql } from "gatsby";
 
 import Layout from '../components/Layout';
 import SmallArticle from "../components/SmallArticle";
@@ -23,19 +23,19 @@ const Tutorials = ({data}) => {
         </div>
       </section>
     );
-  } else {
-    return (
-      <div className="flex flex-column lh-copy">
+  }
+  return (
+    <div className="flex flex-column lh-copy">
         We are writing articles for this page right now! 😊
  Stay tuned and follow us on social networks &darr;       </div>
-    );
-  }
-}
+  );
+  
+};
 
 export default ({data}) => (
   <Layout title="Frontend for Beginners" bannerMessage="tutorials">
-  <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-center justify-center" style={{minHeight: "10px"}}>
-  <Tutorials data={data}/>
+    <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-center justify-center" style={{minHeight: "10px"}}>
+      <Tutorials data={data}/>
     </main>
   </Layout>
 
@@ -71,5 +71,5 @@ query {
     }
   }
 }
-`
+`;
 

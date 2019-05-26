@@ -1,5 +1,5 @@
 import React from "react";
-import {graphql } from "gatsby"
+import {graphql } from "gatsby";
 
 import Layout from '../components/Layout';
 import SmallArticle from "../components/SmallArticle";
@@ -23,12 +23,12 @@ const Articles = ({data}) => {
       </div>
     </section>
   );
-}
+};
 
 export default ({data}) => (
   <Layout title="Frontend for Beginners" bannerMessage="articles">
-  <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-start justify-start">
-  <Articles data={data}/>
+    <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-start justify-start">
+      <Articles data={data}/>
     </main>
   </Layout>
 
@@ -64,5 +64,5 @@ query {
     }
   }
 }
-`
+`;
 

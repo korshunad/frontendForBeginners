@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 const authors = [
   {
@@ -31,20 +31,20 @@ const Bio = ({bio, small, name}) => {
         {bio.substring(0, 200) + '...'} <Link to="/about/">more about {name}</Link>
       </p>
     );
-  } else {
-    return (
-      <p className='mt0'>
-        {bio}
-      </p>
-    );
   }
-}
+  return (
+    <p className='mt0'>
+      {bio}
+    </p>
+  );
+  
+};
 
 const Author = ({imgSrc, name, bio, small}) => (
   <div className={small ? 'pb3 mw7' : 'pb6-l pb4 mw50-l'}>
     <div className="fl mr4 mb2" style={{minWidth: '12rem'}}>
       <h2 className={small ? 'tc mt1' : 'mb4 tc mt1'}>{name}</h2>
-      <div className="center br-pill mb4" style={{backgroundImage: `url(${imgSrc})`, backgroundSize: '100% 100%', backgroundPosition: 'center', height: '9rem', width: '9rem'}}></div>
+      <div className="center br-pill mb4" style={{backgroundImage: `url(${imgSrc})`, backgroundSize: '100% 100%', backgroundPosition: 'center', height: '9rem', width: '9rem'}} />
     </div>
     <Bio
       bio={bio}
@@ -57,4 +57,4 @@ const Author = ({imgSrc, name, bio, small}) => (
 export {
   authors,
   Author
-}
+};

@@ -1,12 +1,12 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+import React from "react";
+import { graphql, Link } from "gatsby";
 
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
 import {Author, authors} from '../components/Author';
 
 const Tag = ({tag}) => (
   <Link to={`/tags/${tag}`} className="article-tag pv2 ph3 dim br2 ma2 w-auto">{tag}</Link>
-)
+);
 
 export default ({ data, location }) => {
   const post = data.markdownRemark;
@@ -44,8 +44,8 @@ export default ({ data, location }) => {
         </div>
       </main>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
 query($slug: String!) {
@@ -61,4 +61,4 @@ query($slug: String!) {
     }
   }
 }
-`
+`;

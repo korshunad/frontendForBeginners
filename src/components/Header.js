@@ -6,7 +6,7 @@ class Header extends React.Component {
     super(props);
     this.state = {
       bmVisible: false
-    }
+    };
     this.toggleBurgerMenu = this.toggleBurgerMenu.bind(this);
   }
 
@@ -15,7 +15,7 @@ class Header extends React.Component {
     this.setState({ bmVisible: !bmVisible});
   }
   updateDimensions() {
-    if(window.innerWidth < 700) {
+    if (window.innerWidth < 700) {
       this.setState({ bmVisible: false });
     } else {
       this.setState({ bmVisible: true });
