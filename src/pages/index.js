@@ -67,7 +67,7 @@ const Tutorials = ({tutorials}) => {
             link={node.fields.slug}
             imgSrc={node.frontmatter.imgSrc}
             imgAlt={node.frontmatter.imgAlt}
-            limitWidth={true}
+  limitWidth={true}
           />
         ))}
       </div>
