@@ -13,10 +13,16 @@
     "lint": "eslint src/**/*.js --fix",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "husky": {
     "hooks": {
       "commit-msg": "echo $HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
   },
   "dependencies": {
@@ -35,6 +41,7 @@
     "eslint-config-react-app": "^4.0.1",
     "eslint-plugin-react-hooks": "^1.6.0",
     "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
     "prettier": "^1.17.0"
   },
   "repository": {
