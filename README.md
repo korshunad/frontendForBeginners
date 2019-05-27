@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Frontend for Beginners blog
+  Frontend for Beginners blog (highstart.dev)
 </h1>
 
 Frontend for Beginners blog contains articles and tutorials aimed mainly at novices in frontend development.
