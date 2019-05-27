@@ -11,7 +11,7 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
 
 ## 🚀 Development guide
 
-1.  **Install packages using npm**
+### 1.  **Install packages using npm**
 
     Generally, the packages are installed using the following notation:
 
@@ -25,7 +25,7 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
     ```
     Occasionally gatsby plugins may be useful, then edit `gatsby-config.js` as well.
 
-2.  **Use Gatsby.js commands**
+### 2.  **Use Gatsby.js commands**
 
     This blog is built using the gatsby.js starter template and uses the following commands:
 
@@ -35,7 +35,7 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
     # to build
     gatsby build
     ```
-3.  **Linting the code**
+### 3.  **Linting the code**
 
     This blog uses ESLint to check programmatic and stylistic errors in Javascript.
     If you want to fix all the possible errors in the codebase run
@@ -46,7 +46,7 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
 
     Generally ESLint runs on each commit, checking the code to be commited, and highlights possible errors. This is done via <a href="https://github.com/okonet/lint-staged" title="run linters on git staged files" target="_blank" rel="noopener noreferrer">lint-staged</a> and <a href="https://github.com/typicode/husky" title="Git hooks made easy" rel="noopener noreferrer">husky</a> packages, the latter leveraging git hooks.
 
-4. **Commit conventions**
+### 4. **Commit conventions**
 
     This project uses <a href="https://github.com/conventional-changelog/commitlint" title="Lint commit messages" rel="noopener noreferrer">commit-lint package</a>. This means that the commits should follow <a href="https://www.conventionalcommits.org/en/v1.0.0-beta.4/" title="Conventional Commits" rel="noopener noreferrer">conventional commits</a> pattern for better human and machine readability.
     The general structure is the following:
@@ -66,7 +66,7 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
     </ul>
     Each intended commit is checked to conform to the `type: subject` formula.
 
-5. **Testing**
+### 5. **Testing**
 
     This project uses Mocha + Puppeteer tests run with `npm run test`. The tests are added to the `test/server-test.js` files. Currently, they check if all pages of the projects are loaded properly.
     When a pull request to `master` branch is created, the tests are run automatically by CircleCI.
@@ -137,11 +137,11 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 20. **`README.md`**: This reference file.
 
-## 🎓 Learning Gatsby
+### 🎓 Learning Gatsby
 
-Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/).
 
-## 💫 Deploy
+##$ 💫 Deploy
 
 This project is deployed to Netlify automatically from `master` branch.
 
