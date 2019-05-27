@@ -23,27 +23,51 @@ app.listen(3000, () => console.log('Example app listening on port 3000!'));
 */
 
 let server;
+let browser;
 
 describe('puppeteer checks the blog', () => {
-  before(() => {
+  before(async () => {
     app.use(express.static('public'));
     server = app.listen(3000, () => console.log('Example app listening on port 3000!'));
+    browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
   });
   it('open home page successfully', async () => {
+  /*
     const browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
+    */
     const page = await browser.newPage();
     await page.goto('http://127.0.0.1:3000/', {waitUntil: 'networkidle2'});
     const bodyHTML = await page.evaluate(() => document.body.innerHTML);
-    await browser.close();
+    //await browser.close();
 
-    const regex = /<\s*span[^>]*>Hello World!<\s*\/\s*span>/g;
+    const regex = /<span class="code-right">(.*?)<\/span>/g;
     let found = bodyHTML.match(regex);
-    expect(bodyHTML).to.equal(null);
+    expect(found[0]).to.equal("<span class=\"code-right\">Hello World!</span>");
   });
-  after(() => {
+  it('open about page successfully', async () => {
+  /*
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+    */
+    const page = await browser.newPage();
+    await page.goto('http://127.0.0.1:3000/about', {waitUntil: 'networkidle2'});
+    const bodyHTML = await page.evaluate(() => document.body.innerHTML);
+    //await browser.close();
+
+    const regex = /<span class="code-right">(.*?)<\/span>/g;
+    let found = bodyHTML.match(regex);
+    expect(found[0]).to.equal("<span class=\"code-right\">about</span>");
+  });
+  after(async () => {
+    await browser.close();
     server.close();
   });
 });
