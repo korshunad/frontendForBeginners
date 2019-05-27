@@ -26,7 +26,10 @@ const server = app.listen(3000, () => console.log('Example app listening on port
 
 describe('puppeteer checks the blog', () => {
   it('open home page successfully', async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
     await page.goto('http://127.0.0.1:3000/');
     const bodyHTML = await page.evaluate(() => document.body.innerHTML);
