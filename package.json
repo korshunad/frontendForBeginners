@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "lint": "eslint src/**/*.js --fix",
-    "test": "eslint src/**/*.js"
+    "test": "eslint src/**/*.js",
+    "test-puppeteer": "mocha test/server-test.js --reporter nyan --recursive --require chai/register-expect"
   },
   "lint-staged": {
     "*.js": [
@@ -54,13 +55,19 @@
     }
   },
   "dependencies": {
+    "chai": "^4.2.0",
+    "ejs": "2.5.8",
+    "express": "^4.17.1",
     "gatsby": "^2.3.34",
     "gatsby-plugin-crisp-chat": "^3.0.0",
+    "gatsby-plugin-express": "^1.1.6",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-remark-prismjs": "^3.2.9",
     "gatsby-source-filesystem": "^2.0.33",
     "gatsby-transformer-remark": "^2.3.12",
+    "mocha": "^6.1.4",
     "prismjs": "^1.16.0",
+    "puppeteer": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1"
