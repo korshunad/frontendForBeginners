@@ -33,11 +33,12 @@ describe('puppeteer checks the blog', () => {
     const page = await browser.newPage();
     await page.goto('http://127.0.0.1:3000/');
     const bodyHTML = await page.evaluate(() => document.body.innerHTML);
-    await browser.close();
+    console.log(bodyHTML);
 
     const regex = /<\s*span[^>]*>Hello World!<\s*\/\s*span>/g;
     let found = bodyHTML.match(regex);
     expect(found[0]).to.equal("<span class=\"code-right\">Hello World!</span>");
+    await browser.close();
   });
   after(() => {
     server.close();
