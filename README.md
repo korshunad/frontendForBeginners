@@ -13,47 +13,47 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
 
 ### 1.  **Install packages using npm**
 
-    Generally, the packages are installed using the following notation:
+Generally, the packages are installed using the following notation:
+    
 
-    ```sh
+    
     # development dependencies
     npm install (name of the package) --save-dev
     # runtime dependencies
     npm install (name of the package) --save
     # installs all packages from package.json
     npm install
-    ```
-    Occasionally gatsby plugins may be useful, then edit `gatsby-config.js` as well.
+    
+Occasionally gatsby plugins may be useful, then edit `gatsby-config.js` as well.
 
 ### 2.  **Use Gatsby.js commands**
 
-    This blog is built using the gatsby.js starter template and uses the following commands:
+This blog is built using the gatsby.js starter template and uses the following commands:
 
-    ```sh
     # to develop locally at http://localhost:8000
     gatsby develop
     # to build
     gatsby build
-    ```
+    
 ### 3.  **Linting the code**
 
-    This blog uses ESLint to check programmatic and stylistic errors in Javascript.
-    If you want to fix all the possible errors in the codebase run
-    ```sh
-      npm run lint
-    ```
-    This command will fix minor errors like indentation and will warn about more complex ones.
+This blog uses ESLint to check programmatic and stylistic errors in Javascript.
+If you want to fix all the possible errors in the codebase run
+    
+    npm run lint
+    
+This command will fix minor errors like indentation and will warn about more complex ones.
 
-    Generally ESLint runs on each commit, checking the code to be commited, and highlights possible errors. This is done via <a href="https://github.com/okonet/lint-staged" title="run linters on git staged files" target="_blank" rel="noopener noreferrer">lint-staged</a> and <a href="https://github.com/typicode/husky" title="Git hooks made easy" rel="noopener noreferrer">husky</a> packages, the latter leveraging git hooks.
+Generally ESLint runs on each commit, checking the code to be commited, and highlights possible errors. This is done via <a href="https://github.com/okonet/lint-staged" title="run linters on git staged files" target="_blank" rel="noopener noreferrer">lint-staged</a> and <a href="https://github.com/typicode/husky" title="Git hooks made easy" rel="noopener noreferrer">husky</a> packages, the latter leveraging git hooks.
 
 ### 4. **Commit conventions**
 
-    This project uses <a href="https://github.com/conventional-changelog/commitlint" title="Lint commit messages" rel="noopener noreferrer">commit-lint package</a>. This means that the commits should follow <a href="https://www.conventionalcommits.org/en/v1.0.0-beta.4/" title="Conventional Commits" rel="noopener noreferrer">conventional commits</a> pattern for better human and machine readability.
-    The general structure is the following:
-    ```sh
+This project uses <a href="https://github.com/conventional-changelog/commitlint" title="Lint commit messages" rel="noopener noreferrer">commit-lint package</a>. This means that the commits should follow <a href="https://www.conventionalcommits.org/en/v1.0.0-beta.4/" title="Conventional Commits" rel="noopener noreferrer">conventional commits</a> pattern for better human and machine readability.
+The general structure is the following:
+    
     type(scope?): subject  #scope is optional
-    ```
-    And the types used in this project are the following:
+    
+And the types used in this project are the following:
     <ul>
       <li>feat (feature),</li>
       <li>fix (bug fixes, etc),</li>
@@ -62,14 +62,14 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
       <li>refactor (refactoring code),</li>
       <li>test (adding tests),</li>
       <li>revert (undo smth),</li>
-      <li>setup (initial setup issues)</li>
+      <li>setup (setup issues)</li>
     </ul>
-    Each intended commit is checked to conform to the `type: subject` formula.
+Each intended commit is checked to conform to the `type: subject` formula.
 
 ### 5. **Testing**
 
-    This project uses Mocha + Puppeteer tests run with `npm run test`. The tests are added to the `test/server-test.js` files. Currently, they check if all pages of the projects are loaded properly.
-    When a pull request to `master` branch is created, the tests are run automatically by CircleCI.
+This project uses Mocha + Puppeteer tests run with `npm run test`. The tests are added to the `test/server-test.js` files. Currently, they check if all pages of the projects are loaded properly.
+When a pull request to `master` branch is created, the tests are run automatically by CircleCI.
 
 ## 🧐 What's inside?
 
@@ -96,29 +96,48 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── static
     ├── test
     └── README.md
+    
 
-| Page                  | Type                           | Description                                                                                                                        |
-|-----------------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| .gitignore            | file                           | tells git which files it should not track / not maintain a version history for                                                     |
-| .circleci/config      | setup file                     | CircleCI instructions, including testing the code automatically when attempting to merge into master                               |
-| .eslintrc.js          | setup file                     | ESLint configuration, common JavaScript coding conventions                                                                         |
-| .commitlint.config.js | setup file                     | initial commit-lint configuration                                                                                                  |
-| gatsby-browser.js     | Gatsby setup file              | usage of the Gatsby browser APIs, extension of the default Gatsby settings affecting the browser                                   |
-| gatsby-config.js      | Gatsby setup file              | main configuration file for a Gatsby site, includes Gatsby plugins and possibly the website metadata                               |
-| gatsby-node.js        | Gatsby setup file              | Gatsby Node APIs (if any), here blog and tag pages are setup to be generated                                                       |
-| LICENSE               |                                | MIT License                                                                                                                        |
-| /node_modules         | folder                         | all of the modules of code that this project depends on (npm packages), automatically generated                                    |
-| package.json          | manifest file                  | the project metadata (the project’s name, author, etc.) and npm packages used, also their settings and scripts                     |
-| package-lock.json     | automatically generated file   | is based on the exact versions of the npm dependencies that were installed for this project                                        |
-| /public               | automatically generated folder | output of the build process, is used for testing and deployment                                                                    |
-| /src                  | code directory                 | source code, related to the front-end of the site                                                                                  |
-| /src/components       | code subdirectory              | all the reusable components used on the website: header, footer, buttons, different UI elements                                    |
-| /src/pages            | code subdirectory              | the website's pages, including homepage and about page (e.g. about.js) and blog pages in markdown format (e.g. center-with-css.md) |
-| /src/styles           | code subdirectory              | main global.css stylesheet and fonts folder                                                                                        |
-| /src/templates        | code subdirectory              | templates for auto-generated pages, such as blog posts and tag pages.                                                              |
-| /static               | file directory                 | static assets, such as images, that are not processed by Webpack, but copied into the public folder untouched.                     |
-| /test                 | code directory                 | Puppeteer + Mocha tests to check the pages are built properly                                                                      |
-| README.md             | docs file                      | describes this project structure and development process                                                                           |
+
+1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+
+2.  **`.circleci`**: This file contains CircleCI instructions, including testing the code automatically when attempting to merge into master.
+
+3.  **`.eslintrc.js`**: This file contains ESLint configuration, common JavaScript coding conventions.
+
+4.  **`.commitlint.config.js`**: This file contains initial commit lint configuration, extended in package.json.
+
+5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+
+6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where Gatsby plugins are included and possibly the website metadata. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+
+7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+
+8.  **`LICENSE`**:  MIT license.
+
+9.  **`/node_modules`**: This directory contains all of the modules of code that this project depends on (npm packages) are automatically installed.
+
+10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of the npm dependencies that were installed for this project. **(You won’t change this file directly).**
+
+11. **`package.json`**: A manifest file for Node.js projects, which includes this project metadata (the project’s name, author, etc.) and npm packages used, also their settings and scripts. This manifest is how npm knows which packages to install for your project.
+
+12.  **`/public`**: This is automatically generated folder during build process for testing and deployment.
+
+13.  **`/src`**: This directory contains all of the code related to the front-end of this site.
+
+14.  **`/src/components`**: This subdirectory contains all the reusable components used on the website: header, footer, buttons, different UI elements.
+
+15.  **`/src/pages`**: This subdirectory contains the website's pages, including homepage and about page (e.g. `about.js`) and blog pages in markdown format (e.g. `center-with-css.md`).
+
+16.  **`/src/styles`**: This subdirectory contains main `global.css` stylesheet and `fonts` folder
+
+17.  **`/src/templates`**: This subdirectory contains templates for auto-generated pages, such as blog posts and tag pages.
+
+18.  **`/static`**: This directory contains static assets used, images.
+
+19.  **`/test`**: This directory contains tests.
+
+20. **`README.md`**: This reference file.
 
 ### 🎓 Learning Gatsby
 
