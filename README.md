@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://highstart.dev">
-    <img alt="Frontend for Beginners" src="https://highstart.dev/logo.svg" width="60" />
+    <img alt="Frontend for Beginners" src="https://highstart.dev/logo.svg" width="200" />
   </a>
 </p>
 <h1 align="center">
@@ -13,7 +13,7 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
 
 1.  **Install packages using npm**
 
-    Generally the packages are installed using following notation:
+    Generally, the packages are installed using the following notation:
 
     ```sh
     # development dependencies
@@ -27,7 +27,7 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
 
 2.  **Use Gatsby.js commands**
 
-    This blog is built using the gatsby.js starter template and uses following commands:
+    This blog is built using the gatsby.js starter template and uses the following commands:
 
     ```sh
     # to develop locally at http://localhost:8000
@@ -44,11 +44,11 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
     ```
     This command will fix minor errors like indentation and will warn about more complex ones.
 
-    Generally ESLint runs on each commit, checking the code to be commited, and highlights possible errors. This is done via <a href="https://github.com/okonet/lint-staged" title="run linters on git staged files">lint-staged</a> and <a href="https://github.com/typicode/husky" title="Git hooks made easy">husky</a> packages, the latter leveraging git hooks.
+    Generally ESLint runs on each commit, checking the code to be commited, and highlights possible errors. This is done via <a href="https://github.com/okonet/lint-staged" title="run linters on git staged files" target="_blank" rel="noopener noreferrer">lint-staged</a> and <a href="https://github.com/typicode/husky" title="Git hooks made easy" rel="noopener noreferrer">husky</a> packages, the latter leveraging git hooks.
 
 4. **Commit conventions**
 
-    This project uses <a href="https://github.com/conventional-changelog/commitlint" title="Lint commit messages">commit-lint package</a>. This means that the commits should follow <a href="https://www.conventionalcommits.org/en/v1.0.0-beta.4/" title="Conventional Commits">conventional commits</a> pattern for better human and machine readability.
+    This project uses <a href="https://github.com/conventional-changelog/commitlint" title="Lint commit messages" rel="noopener noreferrer">commit-lint package</a>. This means that the commits should follow <a href="https://www.conventionalcommits.org/en/v1.0.0-beta.4/" title="Conventional Commits" rel="noopener noreferrer">conventional commits</a> pattern for better human and machine readability.
     The general structure is the following:
     ```sh
     type(scope?): subject  #scope is optional
@@ -68,7 +68,7 @@ Frontend for Beginners blog contains articles and tutorials aimed mainly at novi
 
 5. **Testing**
 
-    This project uses Mocha + Puppeteer tests run with `npm run test`. The tests are added to the `test/server-test.js` files. Currently they check if all pages of the projects are loaded properly.
+    This project uses Mocha + Puppeteer tests run with `npm run test`. The tests are added to the `test/server-test.js` files. Currently, they check if all pages of the projects are loaded properly.
     When a pull request to `master` branch is created, the tests are run automatically by CircleCI.
 
 ## 🧐 What's inside?
@@ -117,7 +117,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of the npm dependencies that were installed for this project. **(You won’t change this file directly).**
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes this project metadata (the project’s name, author, etc) and npm packages used, also their settings and scripts. This manifest is how npm knows which packages to install for your project.
+11. **`package.json`**: A manifest file for Node.js projects, which includes this project metadata (the project’s name, author, etc.) and npm packages used, also their settings and scripts. This manifest is how npm knows which packages to install for your project.
 
 12.  **`/public`**: This is automatically generated folder during build process for testing and deployment.
 
@@ -129,11 +129,11 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 16.  **`/src/styles`**: This subdirectory contains main `global.css` stylesheet and `fonts` folder
 
-17.  **`/src/templates`**: This subdirectory contains templates for auto-generated pages, such as blogposts and tag pages.
+17.  **`/src/templates`**: This subdirectory contains templates for auto-generated pages, such as blog posts and tag pages.
 
 18.  **`/static`**: This directory contains static assets used, images.
 
-19.  **`/test`**: This dirrectory contains tests.
+19.  **`/test`**: This directory contains tests.
 
 20. **`README.md`**: This reference file.
 
