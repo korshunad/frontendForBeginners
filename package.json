@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "lint": "eslint src/**/*.js --fix",
     "test-lint": "eslint src/**/*.js",
-    "test": "mocha test/server-test.js --reporter nyan --recursive --require chai/register-expect"
+    "test": "mocha test/server-test.js --reporter nyan --recursive --require chai/register-expect --timeout 10000"
   },
   "lint-staged": {
     "*.js": [
