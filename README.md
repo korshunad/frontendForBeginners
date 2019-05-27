@@ -1,97 +1,147 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://highstart.dev">
+    <img alt="Frontend for Beginners" src="https://highstart.dev/logo.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  Frontend for Beginners blog
 </h1>
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Frontend for Beginners blog contains articles and tutorials aimed mainly at novices in frontend development.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## 🚀 Development guide
 
-## 🚀 Quick start
+1.  **Install packages using npm**
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+    Generally the packages are installed using following notation:
 
     ```sh
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
+    # development dependencies
+    npm install (name of the package) --save-dev
+    # runtime dependencies
+    npm install (name of the package) --save
+    # installs all packages from package.json
+    npm install
     ```
+    Occasionally gatsby plugins may be useful, then edit `gatsby-config.js` as well.
 
-1.  **Start developing.**
+2.  **Use Gatsby.js commands**
 
-    Navigate into your new site’s directory and start it up.
+    This blog is built using the gatsby.js starter template and uses following commands:
 
     ```sh
-    cd my-hello-world-starter/
+    # to develop locally at http://localhost:8000
     gatsby develop
+    # to build
+    gatsby build
     ```
+3.  **Linting the code**
 
-1.  **Open the source code and start editing!**
+    This blog uses ESLint to check programmatic and stylistic errors in Javascript.
+    If you want to fix all the possible errors in the codebase run
+    ```sh
+      npm run lint
+    ```
+    This command will fix minor errors like indentation and will warn about more complex ones.
 
-    Your site is now running at `http://localhost:8000`!
+    Generally ESLint runs on each commit, checking the code to be commited, and highlights possible errors. This is done via <a href="https://github.com/okonet/lint-staged" title="run linters on git staged files">lint-staged</a> and <a href="https://github.com/typicode/husky" title="Git hooks made easy">husky</a> packages, the latter leveraging git hooks.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+4. **Commit conventions**
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    This project uses <a href="https://github.com/conventional-changelog/commitlint" title="Lint commit messages">commit-lint package</a>. This means that the commits should follow <a href="https://www.conventionalcommits.org/en/v1.0.0-beta.4/" title="Conventional Commits">conventional commits</a> pattern for better human and machine readability.
+    The general structure is the following:
+    ```sh
+    type(scope?): subject  #scope is optional
+    ```
+    And the types used in this project are the following:
+    <ul>
+      <li>feat (feature),</li>
+      <li>fix (bug fixes, etc),</li>
+      <li>docs (documentation),</li>
+      <li>style (altering styles, changing design),</li>
+      <li>refactor (refactoring code),</li>
+      <li>test (adding tests),</li>
+      <li>revert (undo smth),</li>
+      <li>setup (initial setup issues)</li>
+    </ul>
+    Each intended commit is checked to conform to the `type: subject` formula.
+
+5. **Testing**
+
+    This project uses Mocha + Puppeteer tests run with `npm run test`. The tests are added to the `test/server-test.js` files. Currently they check if all pages of the projects are loaded properly.
+    When a pull request to `master` branch is created, the tests are run automatically by CircleCI.
 
 ## 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     .
-    ├── node_modules
-    ├── src
     ├── .gitignore
-    ├── .prettierrc
+    ├── .circleci
+    ├── .eslintrc.js
+    ├── commitlint.config.js
     ├── gatsby-browser.js
     ├── gatsby-config.js
     ├── gatsby-node.js
-    ├── gatsby-ssr.js
     ├── LICENSE
+    ├── node_modules
     ├── package-lock.json
     ├── package.json
+    ├── public
+    ├── src
+    ├────── components
+    ├────── pages
+    ├────── styles
+    ├────── templates
+    ├── static
+    ├── test
     └── README.md
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+2.  **`.circleci`**: This file contains CircleCI instructions, including testing the code automatically when attempting to merge into master.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+3.  **`.eslintrc.js`**: This file contains ESLint configuration, common JavaScript coding conventions.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+4.  **`.commitlint.config.js`**: This file contains initial commit lint configuration, extended in package.json.
 
 5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where Gatsby plugins are included and possibly the website metadata. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
 7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+8.  **`LICENSE`**:  MIT license.
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+9.  **`/node_modules`**: This directory contains all of the modules of code that this project depends on (npm packages) are automatically installed.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of the npm dependencies that were installed for this project. **(You won’t change this file directly).**
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+11. **`package.json`**: A manifest file for Node.js projects, which includes this project metadata (the project’s name, author, etc) and npm packages used, also their settings and scripts. This manifest is how npm knows which packages to install for your project.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+12.  **`/public`**: This is automatically generated folder during build process for testing and deployment.
+
+13.  **`/src`**: This directory contains all of the code related to the front-end of this site.
+
+14.  **`/src/components`**: This subdirectory contains all the reusable components used on the website: header, footer, buttons, different UI elements.
+
+15.  **`/src/pages`**: This subdirectory contains the website's pages, including homepage and about page (e.g. `about.js`) and blog pages in markdown format (e.g. `center-with-css.md`).
+
+16.  **`/src/styles`**: This subdirectory contains main `global.css` stylesheet and `fonts` folder
+
+17.  **`/src/templates`**: This subdirectory contains templates for auto-generated pages, such as blogposts and tag pages.
+
+18.  **`/static`**: This directory contains static assets used, images.
+
+19.  **`/test`**: This dirrectory contains tests.
+
+20. **`README.md`**: This reference file.
 
 ## 🎓 Learning Gatsby
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+This project is deployed to Netlify automatically from `master` branch.
 
-<!-- AUTO-GENERATED-CONTENT:END -->
