@@ -21,10 +21,13 @@ app.use(express.static('public'));
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
 */
-app.use(express.static('public'));
-const server = app.listen(3000, () => console.log('Example app listening on port 3000!'));
 
 describe('puppeteer checks the blog', () => {
+  before(() => {
+    app.use(express.static('public'));
+    const server = app.listen(3000, () => console.log('Example app listening on port 3000!'));
+  });
+
   it('open home page successfully', async () => {
     const browser = await puppeteer.launch({
       headless: true,
@@ -38,8 +41,5 @@ describe('puppeteer checks the blog', () => {
     const regex = /<\s*span[^>]*>Hello World!<\s*\/\s*span>/g;
     let found = bodyHTML.match(regex);
     expect(found[0]).to.equal("<span class=\"code-right\">Hello World!</span>");
-  });
-  after(() => {
-    server.close();
   });
 });
