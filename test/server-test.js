@@ -41,5 +41,6 @@ describe('puppeteer checks the blog', () => {
     const regex = /<\s*span[^>]*>Hello World!<\s*\/\s*span>/g;
     let found = bodyHTML.match(regex);
     expect(found[0]).to.equal("<span class=\"code-right\">Hello World!</span>");
+    server.stop();
   });
 });
