@@ -141,7 +141,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/).
 
-##$ 💫 Deploy
+### 💫 Deploy
 
 This project is deployed to Netlify automatically from `master` branch.
 
