@@ -10,10 +10,10 @@
   src: url('./fonts/AvenirLTStd-Book.otf');
 }
 /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-   resets
-*/
+v2.0 | 20110126
+License: none (public domain)
+resets
+ */
 #___gatsby {
   height: 100%;
 }
@@ -36,35 +36,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* reset end */
 html, body {
@@ -113,6 +113,17 @@ a:hover {
 }
 a:active, a:focus {
   border-bottom: solid 1px #33BDB8;
+}
+.contact a {
+  color: rgb(30, 31, 33);
+  border: none;
+  text-decoration: none;
+  font-family: Avenir, Helvetica, sans-serif;
+}
+.contact a:hover {
+  color: rgb(30, 31, 33, .5);
+}
+.contact a:active, a:focus {
 }
 nav ul li a {
   color: #1E1F21;
@@ -197,33 +208,33 @@ p {
     min-width: 36rem;
   }
   main {
-  /*
+    /*
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
     padding: 50px;
-    */
+     */
   }
   main.about {
-  /*
+    /*
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     padding: 50px;
-    */
+     */
   }
   section.mission {
     place-self: end;
   }
   section.listicles {
-  /*
+    /*
     grid-column-start: 2;
     grid-column-end: span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     grid-template-rows: 1em auto;
-    */
+     */
   }
   section.listicles article {
     grid-row-start: 2;
@@ -234,7 +245,7 @@ p {
     grid-column-end: span 2;
   }
   section.tutorials {
-  /*
+    /*
     display: grid;
     grid-column-start: 1;
     grid-column-end: span 3;
@@ -242,7 +253,7 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
     grid-template-rows: 1em auto;
-    */
+     */
   }
   section.tutorials article {
     grid-row-start: 2;
@@ -259,126 +270,126 @@ p {
   }
 }
 @media (max-width: 1600px) and (min-width: 1200px) {
-nav {
-  min-width: 36rem;
-}
-/*
+  nav {
+    min-width: 36rem;
+  }
+  /*
   main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 30px;
-    padding: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  padding: 30px;
   }
   section.tutorials, section.listicles, section.subscribe {
-    display: grid;
-    grid-gap: 30px;
-    place-items: start;
+  display: grid;
+  grid-gap: 30px;
+  place-items: start;
   }
   section.listicles {
-    grid-column-start: 1;
-    grid-template-rows: 1em auto;
+  grid-column-start: 1;
+  grid-template-rows: 1em auto;
   }
   section.subscribe {
-    grid-column-start: 1;
-    grid-column-end: span 2;
+  grid-column-start: 1;
+  grid-column-end: span 2;
   }
   section.tutorials {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: span 2;
-    grid-template-rows: 1em auto;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  grid-template-rows: 1em auto;
 
   }
-  */
-  .card .text-container {
-    padding: 20px;
-  }
-  .image-container {
-    min-height: 16rem;
-  }
+   */
+.card .text-container {
+  padding: 20px;
+}
+.image-container {
+  min-height: 16rem;
+}
 }
 
 /* targeting tablet screens, including iPad with width 768 px and iPad Pro with width 1024px */
- @media (max-width: 1200px) and (min-width: 700px) {
- .logo {
-   max-width: 150px;
- }
- nav {
-   min-width: 25rem;
- }
- /*
+@media (max-width: 1200px) and (min-width: 700px) {
+  .logo {
+    max-width: 150px;
+  }
+  nav {
+    min-width: 25rem;
+  }
+  /*
   main {
-    display: grid;
-    grid-gap: 30px;
-    padding: 30px;
+  display: grid;
+  grid-gap: 30px;
+  padding: 30px;
   }
   section.listicles, section.tutorials, section.subscribe {
-    display: grid;
-    grid-gap: 30px;
+  display: grid;
+  grid-gap: 30px;
   }
   section.listicles {
-    display: grid;
-    grid-template-rows: 1em auto;
+  display: grid;
+  grid-template-rows: 1em auto;
   }
   section.tutorials {
-    display: grid;
-    grid-template-rows: 1em auto;
+  display: grid;
+  grid-template-rows: 1em auto;
   }
   section.listicles article, section.tutorials article {
-    grid-row-start: 2;
+  grid-row-start: 2;
   }
   section.subscribe {
-    order: 2;
+  order: 2;
   }
-  */
-  .card .text-container {
-    padding: 20px;
-  }
-  .subscribe form {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-  }
-  .subscribe form input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+   */
+.card .text-container {
+  padding: 20px;
+}
+.subscribe form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.subscribe form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
  }
-@media (max-width: 700px) and (min-width: 520px) {
-/*
-  main {
-    display: grid;
-    grid-gap: 20px;
-    padding: 10px;
-  }
-  section.listicles, section.tutorials, section.subscribe {
-    display: grid;
-    grid-gap: 20px;
-  }
-  section.listicles, section.tutorials {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1em auto;
-  }
-  section.listicles article, section.tutorials article {
-    grid-row-start: 2;
-  }
-  section.tutorials article.last {
-    grid-row-start: 3;
-  }
-  */
-  .card .text-container {
-    padding: 10px;
-  }
-  .subscribe form {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-  }
-  .subscribe form input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+ @media (max-width: 700px) and (min-width: 520px) {
+   /*
+   main {
+   display: grid;
+   grid-gap: 20px;
+   padding: 10px;
+   }
+   section.listicles, section.tutorials, section.subscribe {
+   display: grid;
+   grid-gap: 20px;
+   }
+   section.listicles, section.tutorials {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1em auto;
+   }
+   section.listicles article, section.tutorials article {
+   grid-row-start: 2;
+   }
+   section.tutorials article.last {
+   grid-row-start: 3;
+   }
+    */
+.card .text-container {
+  padding: 10px;
+}
+.subscribe form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.subscribe form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
 }
 @media (min-width: 520px) {
   .avatar {
@@ -390,148 +401,167 @@ nav {
   }
 }
 /* targeting smaller screens, including iPhone 7 with 375px width */
- @media (max-width: 520px) {
- /*
+@media (max-width: 520px) {
+  /*
   main {
-    display: grid;
-    grid-gap: 20px;
-    padding: 10px;
+  display: grid;
+  grid-gap: 20px;
+  padding: 10px;
   }
   section.listicles, section.tutorials, section.subscribe {
-    display: grid;
-    grid-gap: 20px;
+  display: grid;
+  grid-gap: 20px;
   }
   section.listicles {
   }
   section.subscribe {
-    order: 2;
+  order: 2;
   }
-  */
-  section.tutorials {
+   */
+section.tutorials {
 
-  }
-  .card .text-container {
-    padding: 10px;
-  }
-  .subscribe form {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-  }
-  .subscribe form input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .logo {
-    max-width: 150px;
-    height: auto;
-  }
+}
+.card .text-container {
+  padding: 10px;
+}
+.subscribe form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.subscribe form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.logo {
+  max-width: 150px;
+  height: auto;
+}
 nav {
   min-width: 50%;
 }
  }
-footer {
-  min-height: 16rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: center;
-}
-header {
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.flex {
-  display: flex;
-}
-.items-center {
-  align-items: center;
-}
-.pa4 {
-  padding: 2rem;
-}
-@media (max-width: 700px) {
-  header {
-    position: relative;
-  }
-  nav ul {
-    visibility: hidden;
-    position: absolute;
-    opacity: 0;
-    right: 0;
-    top: 0;
-    flex-direction: column;
-    background: white;
-    height: 100vh;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-    z-index:5;
-  }
-  nav #burger-menu {
-    display: inline-block;
-  }
-  #close-menu {
-    font-weight: bolder;
-    font-size: 2em;
-    display: inline-block;
-  }
-  nav {
-    text-align: center;
-  }
-}
-@media (min-width: 700px) {
-  nav #burger-menu, #close-menu {
-    display: none;
-  }
-}
-.show {
- visibility: visible;
- display: flex;
- opacity:1;
-}
-.article-tag {
-  background-color: #33BDB8;
-  text-decoration: none;
-  color: white;
-  font-weight: bolder;
-}
-@media (min-width: 60em) {
-  .mw50-l {
-    max-width: calc(50% - 4rem);
-  }
-.sticky-l {
-  position: sticky;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-}
-
-}
-.red {
-  color: ##D7666E;
-}
-@media (min-width: 60em) {
- .w-45-l {
-   width: 45% !important;
+ footer {
+   min-height: 16rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   text-align: center;
  }
-}
-button {
-  background-color: #33BDB8;
-  box-shadow: none;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: .25rem;
-}
+ header {
+   padding: 30px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ header ul {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+ }
+ .flex {
+   display: flex;
+ }
+ .items-center {
+   align-items: center;
+ }
+ .pa4 {
+   padding: 2rem;
+ }
+ @media (max-width: 700px) {
+   header {
+     position: relative;
+   }
+   nav ul {
+     visibility: hidden;
+     position: absolute;
+     opacity: 0;
+     right: 0;
+     top: 0;
+     flex-direction: column;
+     background: white;
+     height: 100vh;
+     justify-content: space-evenly;
+     align-items: center;
+     transition: opacity .25s ease-in-out;
+     -moz-transition: opacity .25s ease-in-out;
+     -webkit-transition: opacity .25s ease-in-out;
+     z-index:5;
+   }
+   nav #burger-menu {
+     display: inline-block;
+   }
+   #close-menu {
+     font-weight: bolder;
+     font-size: 2em;
+     display: inline-block;
+   }
+   nav {
+     text-align: center;
+   }
+ }
+ @media (min-width: 700px) {
+   nav #burger-menu, #close-menu {
+     display: none;
+   }
+ }
+ .show {
+   visibility: visible;
+   display: flex;
+   opacity:1;
+ }
+ .article-tag {
+   background-color: #33BDB8;
+   text-decoration: none;
+   color: white;
+   font-weight: bolder;
+ }
+ @media (min-width: 60em) {
+   .mw50-l {
+     max-width: calc(50% - 4rem);
+   }
+   .sticky-l {
+     position: sticky;
+     position: -webkit-sticky; /* Safari */
+     position: sticky;
+     top: 0;
+   }
+
+ }
+ .red {
+   color: ##D7666E;
+ }
+ @media (min-width: 60em) {
+   .w-45-l {
+     width: 45% !important;
+   }
+ }
+ button {
+   box-shadow: none;
+   color: white;
+   border: none;
+   padding: 0.5rem 1rem;
+   border-radius: .25rem;
+ }
+ /* Social sharing buttons styles */
+
+ .post-social .button {
+   padding: 0;
+   margin: 0.5rem 0.25rem;
+   border-radius: 100%;
+   border: 2px solid #1E1F21;
+ }
+ .post-social .link {
+   margin: 0.5rem 0.25rem;
+   border-radius: 2rem;
+   border: 2px solid #1E1F21;
+ }
+ .post-social .button img {
+   height: 3rem;
+   width: 3rem;
+   margin-bottom:-2px;
+   display:inline-block;
+ }
+

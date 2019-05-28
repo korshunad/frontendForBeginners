@@ -1,0 +1,128 @@
+diff a/src/pages/index.js b/src/pages/index.js	(rejected hunks)
+@@ -2 +2 @@ import React from "react";
+-import { Link, graphql } from "gatsby"
++import { Link, graphql } from "gatsby";
+@@ -13,4 +13,4 @@ const Featured = ({data}) => {
+-      key={node.id}
+-      title={node.frontmatter.title}
+-      shortDescription={node.frontmatter.summary || node.excerpt}
+-      link={node.fields.slug}
++        key={node.id}
++        title={node.frontmatter.title}
++        shortDescription={node.frontmatter.summary || node.excerpt}
++        link={node.fields.slug}
+@@ -19,3 +19,3 @@ const Featured = ({data}) => {
+-  } else {
+-    return (
+-      <FeaturedArticleTile
++  }
++  return (
++    <FeaturedArticleTile
+@@ -25,4 +25,4 @@ const Featured = ({data}) => {
+-      />
+-    );
+-  }
+-}
++    />
++  );
++  
++};
+@@ -33,17 +33,17 @@ const Articles = ({articles}) => {
+-    <div>
+-    <span className="tag">Articles</span>
+-    <Link to="/articles/">See all →</Link>
+-    </div>
+-    <div className="flex flex-row-ns flex-column w-100 flex-wrap">
+-    {articles.map(({ node }) => (
+-      <SmallArticle
+-      key={node.id}
+-      title={node.frontmatter.title}
+-      shortDescription={node.frontmatter.summary || node.excerpt}
+-      link={node.fields.slug}
+-      imgSrc={node.frontmatter.imgSrc}
+-      imgAlt={node.frontmatter.imgAlt}
+-      limitWidth={articles.length > 1}
+-      />
+-    ))}
+-    </div>
++      <div>
++        <span className="tag">Articles</span>
++        <Link to="/articles/">See all →</Link>
++      </div>
++      <div className="flex flex-row-ns flex-column w-100 flex-wrap">
++        {articles.map(({ node }) => (
++          <SmallArticle
++            key={node.id}
++            title={node.frontmatter.title}
++            shortDescription={node.frontmatter.summary || node.excerpt}
++            link={node.fields.slug}
++            imgSrc={node.frontmatter.imgSrc}
++            imgAlt={node.frontmatter.imgAlt}
++            limitWidth={articles.length > 1}
++          />
++        ))}
++      </div>
+@@ -57,17 +57,17 @@ const Tutorials = ({tutorials}) => {
+-    <div>
+-    <span className="tag">Tutorials</span>
+-    <Link to="/tutorials/">See all tutorials →</Link>
+-    </div>
+-    <div className="flex flex-row-ns flex-column w-100 flex-wrap">
+-    {tutorials.map(({ node }) => (
+-      <SmallArticle
+-      key={node.id}
+-      title={node.frontmatter.title}
+-      shortDescription={node.frontmatter.summary || node.excerpt}
+-      link={node.fields.slug}
+-      imgSrc={node.frontmatter.imgSrc}
+-      imgAlt={node.frontmatter.imgAlt}
+-      limitWidth={true}
+-      />
+-    ))}
+-    </div>
++      <div>
++        <span className="tag">Tutorials</span>
++        <Link to="/tutorials/">See all tutorials →</Link>
++      </div>
++      <div className="flex flex-row-ns flex-column w-100 flex-wrap">
++        {tutorials.map(({ node }) => (
++          <SmallArticle
++            key={node.id}
++            title={node.frontmatter.title}
++            shortDescription={node.frontmatter.summary || node.excerpt}
++            link={node.fields.slug}
++            imgSrc={node.frontmatter.imgSrc}
++            imgAlt={node.frontmatter.imgAlt}
++            limitWidth={true}
++          />
++        ))}
++      </div>
+@@ -76 +76 @@ const Tutorials = ({tutorials}) => {
+-}
++};
+@@ -83,10 +83,9 @@ export default ({data}) => {
+-    <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-start justify-start">
+-    <section className={`${ articles.length > 1 ? 'w-70-ns' : 'w-60-ns' } featured w-100 pr5`}>
+-    <Featured data={data}/>
+-    </section>
+-    <Articles articles={articles}/>
+-    <br className={articles ? 'db mt4' : 'dn'}/>
+-    <Tutorials tutorials={tutorials}/>
+-    <section className="subscribe">
+-    </section>
+-    </main>
++      <main className="pa5-l pa4-m pa3 flex flex-row flex-wrap items-start justify-start">
++        <section className={`${ articles.length > 1 ? 'w-70-ns' : 'w-60-ns' } featured w-100 pr5`}>
++          <Featured data={data}/>
++        </section>
++        <Articles articles={articles}/>
++        <br className={articles ? 'db mt4' : 'dn'}/>
++        <Tutorials tutorials={tutorials}/>
++        <section className="subscribe" />
++      </main>
+@@ -96 +95 @@ export default ({data}) => {
+-}
++};
+@@ -127 +126 @@ query {
+-`
++`;

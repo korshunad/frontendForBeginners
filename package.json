@@ -69,7 +69,9 @@
     "puppeteer": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-share": "^3.0.0",
+    "react-twitter-widgets": "^1.7.1"
   },
   "devDependencies": {
     "eslint-config-react-app": "^4.0.1",

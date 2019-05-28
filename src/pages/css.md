@@ -46,7 +46,7 @@ DO THIS
 <pre class="bg-washed-green pa3">
 <code class="language-css">p {
   color: black;
-  paddong: 10px;
+  padding: 10px;
 }
 </code></pre>
 
