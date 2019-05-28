@@ -1,7 +1,7 @@
 ---
 title: "jQuery Toggle Button"
 category: "tutorials"
-tags: ["organization", "css", "jquery", "beginner"]
+tags: ["css", "jquery", "beginner"]
 imgSrc: ""
 imgAlt: ""
 author: "Takako Nakajima"
@@ -11,6 +11,7 @@ date: "2019-05-27"
 ---
 
 <img src="/jquery-toggle-img.png" alt="jQuery toggle button image"/>
+
 Have you ever seen buttons like this?
 
 I bet you do. Rather, you have seen it everywhere on the internet.
@@ -22,26 +23,30 @@ Today I'm going to introduce you how to create a simple toggle button with CSS a
 The Codepen below contains all of the codes for this tutorial.
 So you may check it before going through this tutorial, to grasp its overview.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Toggle button - tutorial" src="//codepen.io/Takako/embed/rgKXmJ/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="265" style="width: 100%; margin-bottom: 50px;" scrolling="no" title="Toggle button - tutorial" src="//codepen.io/Takako/embed/rgKXmJ/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/Takako/pen/rgKXmJ/' target="_blank" rel="noopener noreferrer">Toggle button - tutorial</a> by Takako
   (<a href='https://codepen.io/Takako' target="_blank" rel="noopener noreferrer">@Takako</a>) on <a href='https://codepen.io' target="_blank" rel="noopener noreferrer">CodePen</a>.
 </iframe>
+
 
 ## Step 1: Set-ups
 
 Download jQuery file from the <a target="_blank" rel="noopener noreferrer" href="https://jquery.com/download/#jquery" title="link to the jQuery official download page">jQuery official web page</a>. Choose the top link, "Download the compressed, production jQuery 3.4.1". (The number after "jQuery" can be changed in future. it means jQuery is updated.)
 
-Or, you may also copy the CDN link from <a target="_blank" rel="noopener noreferrer" href="https://code.jquery.com/" title="link to the jQuery CDN link page">their official CDN link page</a>(Choose "jQuery Core 3.4.1", "miniified" version for this tutorial) and paste the CDN link into <code><head></code> tag of your HTML.
-Once you finished embedding jQuery link into your <code><head></code>, next step is to create the body of the toggle button.
+Or, you may also copy the CDN link from <a target="_blank" rel="noopener noreferrer" href="https://code.jquery.com/" title="link to the jQuery CDN link page">their official CDN link page</a>(Choose "jQuery Core 3.4.1", "miniified" version for this tutorial) and paste the CDN link into &lt;head&gt; tag of your HTML.
+Once you finished embedding jQuery link into your &lt;head&gt;, next step is to create the body of the toggle button.
+
 
 ## Step 2: Create the body of the toggle button
-Create two <code><div></code> tags, for button body and button itself.
-And then it’s fun part, add CSS onto those <code><div></code>s.
+
+Create two &lt;div&gt; tags, for button body and button itself.
+And then it’s fun part, add CSS onto those &lt;div&gt;s.
 The code below is just my example code but, you may change to the properties like width, height, color as you like.
+
 HTML:
-<pre class="language-html"><code><div class="wrapper">
-<div class="toggleButton"></div>
-</div></code></pre>
+<pre class="language-html"><code>&lt;div class="wrapper"&gt;
+&lt;div class="toggleButton"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 CSS:
 <pre class="language-css"><code>.wrapper {
   padding:20px;

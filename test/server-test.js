@@ -95,7 +95,7 @@ describe('puppeteer checks the blog', () => {
 
     const regex = /<span class="code-right">(.*?)<\/span>/g;
     let found = bodyHTML.match(regex);
-    expect(found[0]).to.equal("<span class=\"code-right\">JQuery Toggle Button</span>");
+    expect(found[0]).to.equal("<span class=\"code-right\">jQuery Toggle Button</span>");
   });
   after(async () => {
     await browser.close();
