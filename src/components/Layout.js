@@ -19,6 +19,7 @@ export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, 
       <meta name="twitter:card" content="summary_large_image"/>
       <meta itemprop="image" content={imagePreview ? 'https://highstart.dev' + imagePreview :  'https://highstart.dev/general_preview.png'}/>
       <meta property="og:image" content={imagePreview ? 'https://highstart.dev' + imagePreview :  'https://highstart.dev/general_preview.png'}/>
+      <meta name="twitter:image" content={imagePreview ? 'https://highstart.dev' + imagePreview :  'https://highstart.dev/general_preview.png'}/>
       <meta property="og:title" content={`${title} • Frontend for Beginners`}/>
       <meta itemprop="name" content={`${title} • Frontend for Beginners`}/>
       <meta name="twitter:title" content={`${title} • Frontend for Beginners`}/>
