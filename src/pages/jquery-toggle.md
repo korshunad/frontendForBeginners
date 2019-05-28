@@ -9,6 +9,8 @@ imagePreview: "/jquery-toggle.png"
 metaDescr: "jQuery and CSS tutorial for making a simple toggle button."
 date: "2019-05-27"
 ---
+
+<img src="/jquery-toggle-img.png" alt="jQuery toggle button image"/>
 Have you ever seen buttons like this?
 
 I bet you do. Rather, you have seen it everywhere on the internet.
