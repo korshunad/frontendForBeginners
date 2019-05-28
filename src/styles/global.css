@@ -114,6 +114,17 @@ a:hover {
 a:active, a:focus {
   border-bottom: solid 1px #33BDB8;
 }
+.contact a {
+  color: rgb(30, 31, 33);
+  border: none;
+  text-decoration: none;
+  font-family: Avenir, Helvetica, sans-serif;
+}
+.contact a:hover {
+  color: rgb(30, 31, 33, .5);
+}
+.contact a:active, a:focus {
+}
 nav ul li a {
   color: #1E1F21;
   text-decoration: none;
@@ -540,6 +551,11 @@ nav {
    padding: 0;
    margin: 0.5rem 0.25rem;
    border-radius: 100%;
+   border: 2px solid #1E1F21;
+ }
+ .post-social .link {
+   margin: 0.5rem 0.25rem;
+   border-radius: 2rem;
    border: 2px solid #1E1F21;
  }
  .post-social .button img {

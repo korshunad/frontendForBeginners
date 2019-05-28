@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroBanner from "../components/HeroBanner";
 
-export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, location }) => (
+export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, location, nolinks }) => (
   <React.Fragment>
     <Helmet>
       <meta charSet="utf-8" />
@@ -32,6 +32,6 @@ export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, 
     <Header/>
     <HeroBanner message={bannerMessage} dir={dir}/>
     {children}
-    <Footer/>
+    <Footer nolinks={nolinks}/>
   </React.Fragment>
 );
