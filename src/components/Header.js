@@ -62,9 +62,9 @@ class Header extends React.Component {
               </Link>
             </li>
             <li>
-              <a href="mailto:frontendbegins@gmail.com">
+              <Link to="/contact/">
                 Contact
-              </a>
+              </Link>
             </li>
             <span id="close-menu" className="pointer" onClick={this.toggleBurgerMenu}>×</span>
           </ul>

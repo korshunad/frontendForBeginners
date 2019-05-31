@@ -88,6 +88,16 @@ describe('puppeteer checks the blog', () => {
     let found = bodyHTML.match(regex);
     expect(found[0]).to.equal("<span class=\"code-right\">How to Center with CSS in 2019</span>");
   });
+  it('open contact page successfully', async () => {
+    const page = await browser.newPage();
+    await page.goto('http://127.0.0.1:3000/contact', {waitUntil: 'networkidle2'});
+    const bodyHTML = await page.evaluate(() => document.body.innerHTML);
+
+    const regex = /<span class="code-right">(.*?)<\/span>/g;
+    let found = bodyHTML.match(regex);
+    expect(found[0]).to.equal("<span class=\"code-right\">contact</span>");
+  });
+
   it('open article about JQuery toggle button successfully', async () => {
     const page = await browser.newPage();
     await page.goto('http://127.0.0.1:3000/jquery-toggle', {waitUntil: 'networkidle2'});

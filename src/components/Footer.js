@@ -1,8 +1,8 @@
 import React from "react";
 
-export default () => (
+export default ({nolinks}) => (
   <footer>
-    <div className="flex items-center">
+    <div className={nolinks ? 'dn' : "flex items-center"}>
       <a href="https://fb.me/FrontendForBeginners" title="Frontend for beginners Facebook account"  rel="noreferrer noopener" target="_blank">
         <img src="/facebook.svg" alt="Frontend for beginners Facebook account"/>
       </a>

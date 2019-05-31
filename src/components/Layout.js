@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroBanner from "../components/HeroBanner";
 
-export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, location }) => (
+export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, location, nolinks }) => (
   <React.Fragment>
     <Helmet>
       <meta charSet="utf-8" />
@@ -19,6 +19,7 @@ export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, 
       <meta name="twitter:card" content="summary_large_image"/>
       <meta itemprop="image" content={imagePreview ? 'https://highstart.dev' + imagePreview :  'https://highstart.dev/general_preview.png'}/>
       <meta property="og:image" content={imagePreview ? 'https://highstart.dev' + imagePreview :  'https://highstart.dev/general_preview.png'}/>
+      <meta name="twitter:image" content={imagePreview ? 'https://highstart.dev' + imagePreview :  'https://highstart.dev/general_preview.png'}/>
       <meta property="og:title" content={`${title} • Frontend for Beginners`}/>
       <meta itemprop="name" content={`${title} • Frontend for Beginners`}/>
       <meta name="twitter:title" content={`${title} • Frontend for Beginners`}/>
@@ -31,6 +32,6 @@ export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, 
     <Header/>
     <HeroBanner message={bannerMessage} dir={dir}/>
     {children}
-    <Footer/>
+    <Footer nolinks={nolinks}/>
   </React.Fragment>
 );
