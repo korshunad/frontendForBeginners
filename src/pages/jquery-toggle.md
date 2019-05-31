@@ -73,7 +73,7 @@ The code below is to move object 100px to its right.
   margin-left:100px;
 }</code></pre>
 
-We will add this class to <code><div class="toggleButton"></code> using jQuery toggleClass(), when the button is clicked.
+We will add this class to <code>\<div class="toggleButton"\></code> using jQuery toggleClass(), when the button is clicked.
 
 ## Step 4: Add jQuery toggleClass()
 jQuery only require 3 lines to add a toggle function onto the button, while plain JavaScript code needs more lines.
@@ -94,10 +94,10 @@ We want a more smooth, comfortable movement when it's toggled.
 
 To create smooth movement, we will add "transition" property to .toggleButton CSS.
 <pre class="language-css"><code>.toggleButton {
-  transition:1s ease;  
+  transition:1s ease;
 }</code></pre>
 CSS Transition property allows you to add an effect on an arbitrary object.
 <a target="_blank" rel="noopener noreferrer" href="https://www.w3schools.com/css/css3_transitions.asp" title="link to the jQuery CDN link page">*W3S CSS Transition</a>
 
-The code above sets ease transition within 1 second on .toggleButton. 
+The code above sets ease transition within 1 second on .toggleButton.
 Please try out clicking the button and look at how it changed its way to move.
