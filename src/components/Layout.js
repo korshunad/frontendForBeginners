@@ -30,7 +30,10 @@ export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, 
 
     </Helmet>
     <Header/>
-    <HeroBanner message={bannerMessage} dir={dir}/>
+    <HeroBanner
+      message={bannerMessage}
+      dir={dir}
+    />
     {children}
     <Footer nolinks={nolinks}/>
   </React.Fragment>
