@@ -37,11 +37,11 @@ const Bio = ({bio, small, name}) => {
       {bio}
     </p>
   );
-  
+
 };
 
 const Author = ({imgSrc, name, bio, small}) => (
-  <div className={small ? 'pb3 mw7' : 'pb6-l pb4 mw50-l'}>
+  <div className={small ? 'pb3 mw7 flex flex-row-ns flex-column' : 'pb6-l pb4 mw50-l flex flex-row-ns flex-column'}>
     <div className="fl mr4 mb2" style={{minWidth: '12rem'}}>
       <h2 className={small ? 'tc mt1' : 'mb4 tc mt1'}>{name}</h2>
       <div className="center br-pill mb4" style={{backgroundImage: `url(${imgSrc})`, backgroundSize: '100% 100%', backgroundPosition: 'center', height: '9rem', width: '9rem'}} />

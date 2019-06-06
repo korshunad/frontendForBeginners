@@ -12,6 +12,7 @@ export default ({ children, title, bannerMessage, dir, imagePreview, metaDescr, 
       <title>{title}</title>
       <link rel="canonical" href={location ? location : "https://highstart.dev"} />
       <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <meta http-equiv="X-UA-Compatible" content="IE=9"/>
       <meta property="og:site_name" content="Frontend for Beginners"/>
       <meta property="og:type" content="website"/>
