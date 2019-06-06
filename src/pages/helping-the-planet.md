@@ -31,7 +31,7 @@ Built with HTML, CSS, and Javascript
 
 Fireware app provides the fire map that shows where the fires are right now in a particular area, and Twitter feeds for people to get the latest information. It uses AI prediction algorithm based on historical fire data coming from NASA’s satellite images system to estimate the daily chance of fires in the area and provides education on how to provide information about current fires.
 
-<div class="flex flex-row flex-wrap justify-start items-center">
+<div class="flex flex-row-ns flex-column flex-wrap justify-start items-center">
 <img src="/fireware1.png" class="h-auto w-30-l w-50-m w-100 pa2 mw5"/>
 <img src="/fireware2.png" class="h-auto w-30-l w-50-m w-100 pa2 mw5"/>
 <img src="/fireware3.png" class="h-auto w-30-l w-50-m w-100 pa2 mw5"/>
@@ -47,7 +47,7 @@ Built with JavaScript, HTML and Python for predictions.
 
 Life of litter is a web app, react game, that educates about the proper recycling and lifecycle of the trash after you throw it away. It gamifies the recycling experience, inviting to explore more about how different types of trash are recycled.
 
-<div class="flex flex-row flex-nowrap-l flex-wrap justify-start items-start">
+<div class="flex flex-row-ns flex-column flex-nowrap-l flex-wrap justify-start items-start">
 <img src="/life-of-litter1.png" class="h-auto w-50-ns w-100 pa2 mw6"/>
 <img src="/life-of-litter2.png" class="h-auto w-50-ns w-100 pa2 mw6"/>
 </div>
@@ -70,7 +70,7 @@ Built with HTML, JavaScript, CSS, Python.
 ###Track and reduce water usage
 Flow is a toolkit that users can install in their own homes to measure their water usage, getting the data directly from the faucet, and receiving the statistics and insights in the handy app.
 
-<div class="flex flex-row flex-wrap justify-start items-center">
+<div class="flex flex-row-ns flex-column flex-wrap justify-start items-center">
 <img src="/flow1.png" class="h-auto w-30-l w-50-m w-100 pa2 mw5"/>
 <img src="/flow2.png" class="h-auto w-30-l w-50-m w-100 pa2 mw5"/>
 <img src="/flow3.png" class="h-auto w-30-l w-50-m w-100 pa2 mw5"/>

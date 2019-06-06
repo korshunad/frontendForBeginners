@@ -39,14 +39,14 @@ export default ({ data, location }) => {
         </div>
         <div className="sticky-l w-third-l w-100 pa4-l pa3 flex flex-column justify-start h-100 items-center-l">
           <div className="flex flex-column">
-            <div className="flex flex-column-l flex-row items-center">
-              <span className="b pt3-l">Tags</span>
+            <div className="flex flex-column-l flex-row-m flex-column flex-wrap items-center">
+              <span className="b pt3-l w-auto-ns w-100 tc">Tags</span>
               {post.frontmatter.tags.map((tag, i) => (
                 <Tag key={i} tag={tag}/>
               ))}
             </div>
-            <div className="flex flex-column-l flex-row items-center">
-              <span className="b pt3-l">Share</span>
+            <div className="flex flex-column-l flex-row flex-wrap items-center justify-start-ns justify-center pt0-ns pt4">
+              <span className="b pt3-l w-auto-ns w-100 tc">Share</span>
               <Share
                 socialConfig={{
                   twitterHandle: '@FrontendBegins',

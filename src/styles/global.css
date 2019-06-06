@@ -17,10 +17,15 @@ resets
 #___gatsby {
   height: 100%;
 }
+@media (min-width: 60em) {
 #___gatsby > div {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
+}
+}
+pre {
+  overflow-x: scroll !important;
 }
 
 html, body, div, span, applet, object, iframe,
