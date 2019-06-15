@@ -13,6 +13,7 @@ const Tag = ({tag}) => (
 export default ({ data, location }) => {
   const post = data.markdownRemark;
   const author = authors.filter(author => author.name === post.frontmatter.author)[0];
+  const siteData = data.site.siteMetadata;
   return (
     <Layout
       title={post.frontmatter.title}
@@ -20,7 +21,7 @@ export default ({ data, location }) => {
       bannerMessage={post.frontmatter.title}
       imagePreview={post.frontmatter.imagePreview}
       metaDescr={post.frontmatter.metaDescr}
-      location={`https://highstart.dev${post.fields.slug}`}
+      location={`${siteData.url}${post.fields.slug}`}
     >
       <main className="pa5-l pa4-m pa3 flex flex-row-l flex-column items-start justify-start relative">
         <div className="flex flex-column w-two-thirds-l w-100">
@@ -34,7 +35,6 @@ export default ({ data, location }) => {
               name={author.name}
               bio={author.bio}
             />
-
           </div>
         </div>
         <div className="sticky-l w-third-l w-100 pa4-l pa3 flex flex-column justify-start h-100 items-center-l">
@@ -49,9 +49,9 @@ export default ({ data, location }) => {
               <span className="b pt3-l w-auto-ns w-100 tc">Share</span>
               <Share
                 socialConfig={{
-                  twitterHandle: '@FrontendBegins',
+                  twitterHandle: siteData.twitterAccount,
                   config: {
-                    url: `https://highstart.dev${post.fields.slug}`,
+                    url: `${siteData.url}${post.fields.slug}`,
                     title: post.frontmatter.title
                   }
                 }}
@@ -66,6 +66,12 @@ export default ({ data, location }) => {
 
 export const query = graphql`
 query($slug: String!) {
+  site {
+    siteMetadata {
+      twitterAccount
+      url
+    }
+  }
   markdownRemark(fields: { slug: { eq: $slug } }) {
     html
     frontmatter {
