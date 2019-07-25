@@ -74,6 +74,8 @@
     "react-twitter-widgets": "^1.7.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "eslint-config-react-app": "^4.0.1",
     "eslint-plugin-react-hooks": "^1.6.0",
     "husky": "^2.3.0",
