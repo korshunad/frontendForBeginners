@@ -56,7 +56,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "ejs": "2.5.8",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "gatsby": "^2.3.34",
     "gatsby-plugin-crisp-chat": "^3.0.0",
     "gatsby-plugin-express": "^1.1.6",
